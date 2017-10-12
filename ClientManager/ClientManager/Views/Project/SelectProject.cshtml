@@ -1,0 +1,166 @@
+﻿@using ClientManager.Models
+@model InfoProject
+@{
+    Layout = "~/Views/Shared/_LayoutWithMenu.cshtml";
+    ViewBag.Title = "SelectProject";
+
+    var Status = Model.StatusWorks.Name;
+
+}
+
+<div class="col-lg-8 col-md-8">
+<h2>@ViewBag.NameProject</h2>
+
+    @if (Status == "Завершен")
+    {
+        <span class="label label-success">@Status</span><br />
+    }
+
+    @if (Status == "Приостановлен")
+    {
+        <span class="label label-danger">@Status</span><br />
+    }
+
+    @if (Status == "В процессе")
+    {
+        <span class="label label-primary">@Status</span><br />
+
+    }
+   
+    <span class="text-primary">Дата начала:@Model.Create</span><br />
+    <span class="text-success">Дата заверешени: @Model.Completed</span><br />
+
+<div class="progress">
+    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuem="100" aria-valuenow="50" aria-valuemin="0" style="width:@ViewBag.Progress%;" >
+      Выполнен на @ViewBag.Progress %
+    </div>
+</div>
+
+    @if(User.IsInRole("admin"))
+    {
+        using (Html.BeginForm("UpdateStatus", "Project", FormMethod.Post))
+        {
+        <label>
+            Завершенность проекта: <input type="text" class="form-control" placeholder="Введите процент завершенности проекта" name="Procent" />
+        </label><br />
+        <input type="hidden" value="@Model.Id" name="GuidProject"/><br />
+        <input type="submit" class="btn btn-new" value="Добавить"/>
+            }
+        }
+
+<h4>Описание проекта</h4>
+<p>
+    @ViewBag.Desc
+</p>
+
+    @if (User.IsInRole("admin"))
+    {
+        using (Html.BeginForm("UpdateStatus", "Project", FormMethod.Post))
+        {
+        <select class="form-control" name="UpStatus">
+            @foreach (var status in ViewBag.Status)
+            {
+                <option value="@status.Id">@status.Name</option>
+            }
+        </select>
+        <input type="hidden" value="@Model.Id" name="GuidProject" />
+
+        <input type="submit" class="btn btn-new" value="Обновить статус" />
+        }
+    }
+
+    <br /><br />
+
+    @{ 
+        var alltask = Model.Tasks.Count();
+        var imptask = Model.Tasks.Where(t => t.Prioritys.Name == "Важно").Count();
+    }
+    <div class="btn-group">
+        <button type="button" class="btn btn-default" id="all">Все задачи <span class="badge">@alltask</span></button>
+        <button type="button" class="btn btn-default" id="important">Важные <span class="badge">@imptask</span></button>
+    </div>
+    <br /><br />
+
+    <div id="showall">
+       
+        @foreach (var s in Model.Tasks)
+{
+    var status = s.StatusWorks.Select(a => a.Name).Aggregate((i, j) => i);
+    var r = s.Prioritys.Tasks.Select(a => a.Prioritys.Name).Aggregate((i, j) => i);
+    
+      <div class="panel panel-default">
+          <div class="panel-body">
+    <a href="~/Task/SelectTask/@s.Id" class="pad_p">@s.Name</a> 
+
+
+    @if (r == "Важно")
+    {
+        <span class="glyphicon glyphicon-fire fire"></span>
+    }
+
+    @if (status == "В процессе")
+    {
+        <span class="label label-info">@status</span><br />
+    }
+
+    @if (status == "Завершен")
+    {
+        <span class="label label-success">@status</span><br />
+    }
+
+    @if (status == "Приостановлен")
+    {
+        <span class="label label-danger">@status</span><br />
+    }
+
+ @*@if (User.IsInRole("admin"))
+ {
+     @Html.ActionLink("Удалить", "Delete", "Task", new { Id = s.Id, IdProject = Model.Id })
+ }*@
+
+            </div>
+            </div>
+}
+           
+    </div>
+
+    <div id="showimp" class="panel panel-body">
+        <div class="panel-body">
+        @foreach (var imp in Model.Tasks.Where(t => t.Prioritys.Name == "Важно"))
+        {
+            @imp.Name <span class="glyphicon glyphicon-fire fire"></span><br />
+        }
+            </div>
+    </div>
+
+</div>
+
+@section Scripts
+{
+    
+   <script type="text/javascript">
+
+       $(document).ready(function () {
+
+           var imp = $("#showimp").hide();
+           var all = $("#showall");
+
+           $("#important").click(function () {
+
+               imp.show();
+               all.hide();
+
+           });
+
+           $("#all").click(function () {
+
+               imp.hide();
+               all.show();
+
+           });
+
+       });
+
+    </script>
+    
+    }

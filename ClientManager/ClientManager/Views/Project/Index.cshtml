@@ -1,0 +1,36 @@
+﻿@model PagedList.IPagedList<ClientManager.Models.InfoProject>
+@using PagedList.Mvc
+@{
+    Layout = "~/Views/Shared/_LayoutWithMenu.cshtml";
+    ViewBag.Title = "Проекты";
+}
+
+
+
+<h2>@ViewBag.Title</h2>
+
+<div class="col-lg-8 col-md-8">
+    
+    @foreach (var project in Model.OrderByDescending(a => a.Create))
+    {
+        <div class="block-project"> 
+           <a href="SelectProject/@project.Id" class="link-project">@project.Name</a><br />
+            <span class="text-primary">Дата начала проекта: @project.Create</span><br />
+            <span class="text-success">Дата сдачи проекта: @project.Completed</span><br />
+            <span class="label label-info">В процессе разработки</span> <strong>Завершен на @project.Progress %</strong>
+           <p class="pad_p">@project.Description</p>
+
+            @if (project.LinkSubdomen != "")
+            {
+                <a href="#" class="text-info text">@project.LinkSubdomen</a><br />
+            }
+           
+            <a href="SelectProject/@project.Id" class="btn btn-info">Подробнее <span class="glyphicon glyphicon-chevron-right"></span></a>
+        </div>
+     
+    }
+
+    Страница @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) из @Model.PageNumber
+
+    @Html.PagedListPager(Model, Page => Url.Action("Index", new { Page }))
+</div>
