@@ -1,6 +1,5 @@
 $(document).ready(function() {
     
-
     // Только для скроллинга
     (function(){
         $.scrollify({
@@ -9,6 +8,16 @@ $(document).ready(function() {
             scrollSpeed: 2000,
             scrollbars: false,
 			touchScroll: true,
+        });
+    }());
+
+    // Только для каруселей
+    (function(){
+        $(".owl-carousel").owlCarousel({
+            dots: true,
+            autoplay: true,
+            dotsContainer: $(".buttons-area"),
+            dotData: $(".btn"),
         });
     }());
 
