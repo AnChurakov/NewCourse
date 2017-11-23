@@ -157,40 +157,50 @@ h3 {
 .about-btn:hover {
     opacity: .9;
 }
-/* ------- */
 
-/* Сварщик */
-.slide--1 {
-    background-image: url('../images/svargr.jpg');
-    background-repeat: no-repeat;
-    background-position: 150%;
-    background-size: 75%;
-    overflow: hidden;
-}
-
-.left-text-area {
+.text-area {
     position: relative;
     z-index: 700;
-    height: 100%;
-    width: 40%;
     color: #333333;
     background-color: #FFF;
     padding: 55px 55px;
+    height: 100%;
 }
-.square-right {
+.text-area__text {
+    position: relative;
+    z-index: 900;
+}
+.left-text-area {
+    width: 40%;
+}
+.left-text-area__text {
+    width: 140%;
+}
+.square {
     width: 100%;
     height: 70%;
     background-color: #FFF;
     position: absolute;
     z-index: 600;
+}
+.square-right {
     right: -55%;
     top: 25%;
     transform: rotate(65deg) skewX(45deg);
 }
-.left-text-area__text {
+.square-left {
+    left: -59%;
+    top: 15%;
+    transform: rotate(65deg) skewX(45deg);
+}
+
+.right-text-area {
+    width: 40%;
+    margin-left: 60%;
+}
+.right-text-area__text {
     width: 140%;
-    position: relative;
-    z-index: 900;
+    left: -39%;
 }
 
 .buttons-area {
@@ -198,8 +208,74 @@ h3 {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    vertical-align: bottom;
+}
+.right-text-area__text + .buttons-area {
+    position: relative;
+    z-index: 700;
+    left: -39%;
 }
 /* ------- */
+
+/* Карусели */
+.slide__carousel {
+    height: 100%;
+    vertical-align: bottom;
+}
+.carousel__slide {
+    height: 100%;
+    overflow: hidden;
+}
+/* ------- */
+
+/* Фоны по специальностям */
+
+/* Сварщик */
+.welder {
+    background-image: url('../images/svargr.jpg');
+    background-repeat: no-repeat;
+    background-position: 150%;
+    background-size: 75%;
+}
+/* Мастер по ремонту строительных машин */
+.machinist {
+    background-image: url('../images/build_cars_back.png');
+    background-repeat: no-repeat;
+    background-position: 0% 10%;
+    background-size: 75%;
+}
+
+.carpenter {
+    background-image: url('../images/table_master.png');
+    background-repeat: no-repeat;
+    background-position: 150%;
+    background-size: 77%;
+}
+
+.dry-builder {
+    background-image: url('../images/dry_master_build_back.png');
+    background-repeat: no-repeat;
+    background-position: 0% 10%;
+    background-size: 75%;
+}
+
+.builder {
+    background-image: url('../images/expl_bilding_build_master.png');
+    background-repeat: no-repeat;
+    background-position: 150%;
+    background-size: 77%;
+}
+
+.electric {
+    background-image: url('../images/electro_master.png');
+    background-repeat: no-repeat;
+    background-position: -65%;
+    background-size: 70%;
+}
+
+/* ------- */
+
+
 
 .sample-slide {
     background-repeat: no-repeat;

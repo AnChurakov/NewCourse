@@ -4,8 +4,7 @@ $(document).ready(function() {
     (function(){
         $.scrollify({
             section: ".page__main",
-            sectionName: "",
-            scrollSpeed: 2000,
+            scrollSpeed: 1700,
             scrollbars: false,
 			touchScroll: true,
         });
@@ -13,12 +12,7 @@ $(document).ready(function() {
 
     // Только для каруселей
     (function(){
-        $(".owl-carousel").owlCarousel({
-            dots: true,
-            autoplay: true,
-            dotsContainer: $(".buttons-area"),
-            dotData: $(".btn"),
-        });
+        // TODO: карусель для горизонтальных слайдов
     }());
 
     // Объект с пунктами меню
@@ -64,12 +58,26 @@ $(document).ready(function() {
                 }, 1000);
             });
         }, 2000);
+
         $(".down-arrow__shape").eq(0).click(function(){
             $.scrollify.next();
         });
         $(".links-area__plus-button-tooltip").click(function(){
             var slideNumber = $(this).data("slide");
             $.scrollify.move(slideNumber);
+        });
+
+        $(".js-go-to-info").eq(0).click(function(){
+
+        });
+        $(".js-go-to-spec").eq(0).click(function(){
+
+        });
+        $(".js-go-to-entrance").eq(0).click(function(){
+
+        });
+        $(".js-go-to-contacts").eq(0).click(function(){
+            $.scrollify.move(8);
         });
     }());
 
