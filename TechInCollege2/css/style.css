@@ -207,7 +207,7 @@ h3 {
 .buttons-area {
     width: 130%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     vertical-align: bottom;
 }
