@@ -4,7 +4,7 @@ $(document).ready(function() {
     (function(){
         $.scrollify({
             section: ".page__main",
-            scrollSpeed: 1700,
+            scrollSpeed: 2200,
             scrollbars: false,
 			touchScroll: true,
         });
