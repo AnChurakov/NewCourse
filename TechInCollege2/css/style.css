@@ -141,7 +141,7 @@ h3 {
     left: 0;
     width: 100%;
     height: 100%;
-    transform: skewX(-30deg);
+    transform: skewX(-20deg);
 }
 .btn-text {
     position: relative;
@@ -194,7 +194,7 @@ h3 {
     transform: rotate(65deg) skewX(45deg);
 }
 .square-left {
-    left: -60%;
+    left: -59%;
     top: 5%;
     transform: rotate(65deg) skewX(45deg);
 }
