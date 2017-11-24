@@ -49,7 +49,7 @@ $(document).ready(function() {
     
     // События
     (function(){
-        setInterval(function(){
+        /*setInterval(function(){
             $(".down-arrow__shape").eq(0).animate({
                 top: "-=10px",
             }, 1000, function() {
@@ -57,7 +57,7 @@ $(document).ready(function() {
                     top: "0",
                 }, 1000);
             });
-        }, 2000);
+        }, 2000);*/
 
         $(".down-arrow__shape").eq(0).click(function(){
             $.scrollify.next();

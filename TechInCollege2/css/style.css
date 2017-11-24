@@ -120,6 +120,7 @@ h3 {
     font-family: GlLight, sans-serif;
     line-height: 1.5;
     padding: 20px 0 0;
+    font-size: 19px;
 }
 .btn {
     padding: 17px 35px;
@@ -189,8 +190,8 @@ h3 {
     transform: rotate(65deg) skewX(45deg);
 }
 .square-left {
-    left: -59%;
-    top: 15%;
+    left: -60%;
+    top: 5%;
     transform: rotate(65deg) skewX(45deg);
 }
 
@@ -206,7 +207,7 @@ h3 {
 .buttons-area {
     width: 130%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     vertical-align: bottom;
 }
@@ -684,6 +685,12 @@ video {
     }
     .logo__text {
         font-size: 30px;
+    }
+    .right-text-area__text {
+        width: 120%;
+    }
+    .down-arrow {
+        bottom: -35%;
     }
 }
 /* -------------------------------*/
