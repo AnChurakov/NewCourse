@@ -6,7 +6,21 @@ $(document).ready(function() {
             section: ".page__main",
             scrollSpeed: 1700,
             scrollbars: false,
-			touchScroll: true,
+            touchScroll: true,
+            before: function(){
+                if ($.scrollify.current().index() == 1) {
+                    $(".page__navigation").hide();
+                } else {
+                    $(".page__navigation").show();
+                }
+            },
+            afterRender: function() {
+                if ($.scrollify.current().index() == 1) {
+                    $(".page__navigation").hide();
+                } else {
+                    $(".page__navigation").show();
+                }
+            },
         });
     }());
 
@@ -69,20 +83,33 @@ $(document).ready(function() {
 
 
         // Куда идут ссылки из главного меню
-        $(".js-go-to-info").eq(0).click(function(){
+        $(".js-go-to-info").click(function(){
             
         });
-        $(".js-go-to-spec").eq(0).click(function(){
+        $(".js-go-to-spec").click(function(){
             // К первому слайду специальностей
             $.scrollify.move(1);
         });
-        $(".js-go-to-entrance").eq(0).click(function(){
+        $(".js-go-to-entrance").click(function(){
 
         });
-        $(".js-go-to-contacts").eq(0).click(function(){
+        $(".js-go-to-contacts").click(function(){
             // К слайду с контактной информацией
             $.scrollify.move(7);
         });
+
+        // Навигационное меню
+        $('.js-nav-menu-toggle').on('click', function() {
+            $(this).parents('.navigation-menu').toggleClass('navigation-menu--open');
+        });
+          
+        $('html').on('click', function(e) {
+            if(!$(e.target).closest('.js-nav-menu').length &&
+              ($('.js-nav-menu').hasClass('navigation-menu--open'))) {
+                $('.js-nav-menu').removeClass('navigation-menu--open');
+            }
+        });
+
     }());
 
 });
