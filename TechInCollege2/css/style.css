@@ -220,6 +220,25 @@ h3 {
     z-index: 700;
     left: -39%;
 }
+
+.rect-text {
+    position: relative;
+    z-index: 900;
+    padding: 25px 0;
+    margin-bottom: 25px;
+}
+.rect-text:before {
+    content: '';
+    position: absolute;
+    z-index: 890;
+    top: 0;
+    left: -35%;
+    width: 100%;
+    height: 100%;
+    background-color: #0691f6;
+    transform: skewX(-45deg);
+}
+
 /* ------- */
 
 /* Карусели */
@@ -276,6 +295,49 @@ h3 {
     background-repeat: no-repeat;
     background-position: -65%;
     background-size: 70%;
+}
+
+/* ------- */
+
+/* Основные слайды */
+
+/* Контакты */
+.contacts {
+    background-image: url('../images/contacts_back.png');
+    background-repeat: no-repeat;
+    background-position: 0% 10%;
+    background-size: 47%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: left;
+    position: relative;
+    z-index: 700;
+}
+.contacts:before {
+    content: '';
+    position: absolute;
+    z-index: 750;
+    top: 0;
+    left: 0;
+    width: 47%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.contacts__text {
+    font-family: GlBold, sans-serif;
+    position: relative;
+    z-index: 1000;
+    font-size: 30px;
+    width: 80%;
+}
+.contacts__info {
+    width: 47%;
+    padding: 100px 55px;
+}
+.contacts__map {
+    width: 53%;
+    height: 100%;
+    background-color: #ffffff; 
 }
 
 /* ------- */

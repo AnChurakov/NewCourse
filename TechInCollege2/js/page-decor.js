@@ -4,7 +4,7 @@ $(document).ready(function() {
     (function(){
         $.scrollify({
             section: ".page__main",
-            scrollSpeed: 2200,
+            scrollSpeed: 1700,
             scrollbars: false,
 			touchScroll: true,
         });
@@ -67,17 +67,21 @@ $(document).ready(function() {
             $.scrollify.move(slideNumber);
         });
 
-        $(".js-go-to-info").eq(0).click(function(){
 
+        // Куда идут ссылки из главного меню
+        $(".js-go-to-info").eq(0).click(function(){
+            
         });
         $(".js-go-to-spec").eq(0).click(function(){
-
+            // К первому слайду специальностей
+            $.scrollify.move(1);
         });
         $(".js-go-to-entrance").eq(0).click(function(){
 
         });
         $(".js-go-to-contacts").eq(0).click(function(){
-            $.scrollify.move(8);
+            // К слайду с контактной информацией
+            $.scrollify.move(7);
         });
     }());
 
