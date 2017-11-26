@@ -960,5 +960,9 @@ video {
     .down-arrow {
         bottom: -130%;
     }
+    .info-tech .rect-text:before {
+        width: 90%;
+        left: -20%;
+    }
 }
 /* -------------------------------*/
