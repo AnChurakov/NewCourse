@@ -226,6 +226,7 @@ h3 {
     z-index: 900;
     padding: 25px 0;
     margin-bottom: 25px;
+    color: #fff;
 }
 .rect-text:before {
     content: '';
@@ -237,6 +238,10 @@ h3 {
     height: 100%;
     background-color: #0691f6;
     transform: skewX(-45deg);
+}
+.rect-text__text {
+    position: relative;
+    z-index: 1000;
 }
 
 /* ------- */
@@ -406,7 +411,7 @@ h3 {
   }
   @media only screen and (max-width: 480px) {
     .navigation-menu {
-      background-color: #4E567E;
+      background-color: #0691f6;
       min-width: 240px;
       width: 80%;
     }
@@ -509,14 +514,16 @@ h3 {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
 }
-.contacts__text {
+.contacts__text,
+.info-tech__text {
     font-family: GlBold, sans-serif;
     position: relative;
     z-index: 1000;
     font-size: 30px;
     width: 80%;
 }
-.contacts__info {
+.contacts__info,
+.info-tech__info {
     width: 50%;
     padding: 150px 55px;
 }
@@ -524,6 +531,12 @@ h3 {
     width: 50%;
     height: 100%;
     background-color: #ffffff; 
+}
+
+/* Контакты */
+.info-tech .rect-text:before {
+    width: 110%;
+    left: -20%;
 }
 
 /* ------- */

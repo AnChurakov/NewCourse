@@ -86,21 +86,21 @@ $(document).ready(function() {
         $(".js-go-to-info").click(function(){
             
         });
-		$(".js-go-to-glav").click(function(){
+		$(".js-go-to-main").click(function(){
             // К первому и главному слайду
             $.scrollify.move(0);
         });
 		
         $(".js-go-to-spec").click(function(){
             // К первому слайду специальностей
-            $.scrollify.move(1);
+            $.scrollify.move(2);
         });
         $(".js-go-to-entrance").click(function(){
 
         });
         $(".js-go-to-contacts").click(function(){
             // К слайду с контактной информацией
-            $.scrollify.move(10);
+            $.scrollify.move(11);
         });
 		
 		$("#admission").click(function() {
