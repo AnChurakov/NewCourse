@@ -397,7 +397,7 @@ h3 {
     transition: all ease-in-out .7s;
 }
 .menu-list__item:hover:before {
-    width: 35%;
+    width: 65%;
 }
   
   @media only screen and (max-width: 700px) {
