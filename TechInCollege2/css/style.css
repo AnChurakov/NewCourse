@@ -900,6 +900,11 @@ video {
     .logo__text {
         font-size: 30px;
     }
+	
+	  .down-arrow {
+        bottom: -120%;
+    }
+	
 }
 @media (min-width: 1900px)  {
     .links-area {
@@ -918,7 +923,7 @@ video {
         width: 120%;
     }
     .down-arrow {
-        bottom: -35%;
+        bottom: -130%;
     }
 }
 /* -------------------------------*/

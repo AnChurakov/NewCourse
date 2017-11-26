@@ -86,6 +86,11 @@ $(document).ready(function() {
         $(".js-go-to-info").click(function(){
             
         });
+		$(".js-go-to-glav").click(function(){
+            // К первому и главному слайду
+            $.scrollify.move(0);
+        });
+		
         $(".js-go-to-spec").click(function(){
             // К первому слайду специальностей
             $.scrollify.move(1);
