@@ -461,6 +461,28 @@ h3 {
     background-size: 70%;
 }
 
+.otdel{
+     background-image: url('../images/otdel-work.jpg');
+    background-repeat: no-repeat;
+    background-position: 150%;
+    background-size: 77%;
+}
+
+.jkx{
+  background-image: url('../images/test.jpg');
+    background-repeat: no-repeat;
+    background-position: -35%;
+    background-size: 70%;
+}
+
+.ob-stroy
+{
+	 background-image: url('../images/ob.jpg');
+    background-repeat: no-repeat;
+    background-position: 165%;
+    background-size: 77%;
+}
+
 /* ------- */
 
 /* Основные слайды */
