@@ -100,8 +100,15 @@ $(document).ready(function() {
         });
         $(".js-go-to-contacts").click(function(){
             // К слайду с контактной информацией
-            $.scrollify.move(7);
+            $.scrollify.move(10);
         });
+		
+		$("#admission").click(function() {
+			
+			//К слайду Условия поступления
+			$.scrollify.move();
+		
+		});
 
         // Навигационное меню
         $('.js-nav-menu-toggle').on('click', function() {
