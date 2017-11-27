@@ -124,7 +124,7 @@ h3 {
 }
 .btn {
     padding: 17px 25px;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: bold;
     border: none;
     cursor: pointer;
@@ -425,44 +425,44 @@ h3 {
 
 /* Сварщик */
 .welder {
-    background-image: url('../images/svargr.jpg');
+    background-image: url('../images/svargrweb.jpg');
     background-repeat: no-repeat;
     background-position: 150%;
     background-size: 75%;
 }
 /* Мастер по ремонту строительных машин */
 .machinist {
-    background-image: url('../images/build_cars_back.png');
+    background-image: url('../images/build-machine.jpg');
     background-repeat: no-repeat;
     background-position: 0% 10%;
     background-size: 75%;
 }
 
 .carpenter {
-    background-image: url('../images/table_master.png');
+    background-image: url('../images/plot-work.jpg');
     background-repeat: no-repeat;
-    background-position: 150%;
+    background-position: 200%;
     background-size: 77%;
 }
 
 .dry-builder {
-    background-image: url('../images/dry_master_build_back.png');
+    background-image: url('../images/sux-work.jpg');
     background-repeat: no-repeat;
-    background-position: 0% 10%;
+    background-position: -30% 10%;
     background-size: 75%;
 }
 
 .builder {
-    background-image: url('../images/expl_bilding_build_master.png');
+    background-image: url('../images/build-zd.jpg');
     background-repeat: no-repeat;
-    background-position: 150%;
+    background-position: 180% 10%;
     background-size: 77%;
 }
 
 .electric {
-    background-image: url('../images/electro_master.png');
+    background-image: url('../images/electrik.jpg');
     background-repeat: no-repeat;
-    background-position: -65%;
+    background-position: -50%;
     background-size: 70%;
 }
 

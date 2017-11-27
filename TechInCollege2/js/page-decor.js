@@ -8,16 +8,18 @@ $(document).ready(function() {
             scrollbars: false,
             touchScroll: true,
             before: function(){
-                if ($.scrollify.current().index() == 1) {
-                    $(".page__navigation").hide();
-                } else {
+                //if ($.scrollify.current().index() == 1) {
+                    //$(".page__navigation").hide();
+               // } else
+				{
                     $(".page__navigation").show();
                 }
             },
             afterRender: function() {
-                if ($.scrollify.current().index() == 1) {
-                    $(".page__navigation").hide();
-                } else {
+                //if ($.scrollify.current().index() == 1) {
+                    //$(".page__navigation").hide();
+                //} else 
+				{
                     $(".page__navigation").show();
                 }
             },
@@ -73,6 +75,7 @@ $(document).ready(function() {
             });
         }, 2000);*/
 
+			
         $(".down-arrow__shape").eq(0).click(function(){
             $.scrollify.next();
         });
@@ -84,7 +87,7 @@ $(document).ready(function() {
 
         // Куда идут ссылки из главного меню
         $(".js-go-to-info").click(function(){
-            
+            $.scrollify.move(1);
         });
 		$(".js-go-to-main").click(function(){
             // К первому и главному слайду
@@ -100,13 +103,13 @@ $(document).ready(function() {
         });
         $(".js-go-to-contacts").click(function(){
             // К слайду с контактной информацией
-            $.scrollify.move(11);
+            $.scrollify.move(12);
         });
 		
-		$("#admission").click(function() {
+		$(".admission").click(function() {
 			
 			//К слайду Условия поступления
-			$.scrollify.move();
+			$.scrollify.move(11);
 		
 		});
 
