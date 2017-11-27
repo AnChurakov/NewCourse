@@ -515,12 +515,17 @@ h3 {
     background-color: rgba(0, 0, 0, 0.5);
 }
 .contacts__text,
-.info-tech__text {
+.info-tech__text{
     font-family: GlBold, sans-serif;
     position: relative;
     z-index: 1000;
     font-size: 30px;
     width: 80%;
+}
+.normal
+{
+	font-size:20px;
+	color:#000;
 }
 .contacts__info,
 .info-tech__info {
