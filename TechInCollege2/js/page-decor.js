@@ -99,7 +99,7 @@ $(document).ready(function() {
             $.scrollify.move(2);
         });
         $(".js-go-to-entrance").click(function(){
-
+			$.scrollify.move(11)
         });
         $(".js-go-to-contacts").click(function(){
             // К слайду с контактной информацией
