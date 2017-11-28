@@ -1063,8 +1063,7 @@ video {
     .logo__text {
         font-size: 30px;
     }
-	
-	  .down-arrow {
+	.down-arrow {
         bottom: -120%;
     }
 	
@@ -1091,6 +1090,9 @@ video {
     .info-tech .rect-text:before {
         width: 90%;
         left: -20%;
+    }
+    .info-tech__connect {
+        padding: 65px 65px;
     }
 }
 /* -------------------------------*/
