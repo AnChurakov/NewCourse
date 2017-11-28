@@ -843,6 +843,11 @@ video {
     top: 145px;
     left: 100px;
 }
+.links-area__plus-button--9 {
+    top: 250px;
+	right:-50px;
+    
+}
 /* ------ */
 
 /* Параллелипипед с текстом */
