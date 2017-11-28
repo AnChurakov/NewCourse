@@ -5,7 +5,7 @@ $(document).ready(function() {
         $.scrollify({
             section: ".page__main",
             scrollSpeed: 1500,
-            scrollbars: false,
+            scrollbars: false,           
             touchScroll: true,
             before: function(){
                 //if ($.scrollify.current().index() == 1) {
