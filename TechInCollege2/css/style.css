@@ -35,18 +35,14 @@ ul, ol {
 
 
 /* Шрифты */
-@font-face{
-	
-	font-family:GlBold;
-	src:url('../fonts/glbold.otf');
-	
+@font-face {
+	font-family: GlBold;
+	src: url('../fonts/glbold.otf');
 }
 
-@font-face{
-	
-	font-family:GlLight;
-	src:url('../fonts/glight.otf');
-	
+@font-face {
+	font-family: GlLight;
+	src: url('../fonts/glight.otf');
 }
 
 /* Страница */
@@ -670,6 +666,12 @@ h3 {
     background-repeat: no-repeat;
     background-size: cover;
     background-color:lightgreen;
+    background-position: 50%;
+}
+.sample-slide2 {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color:rgb(153, 144, 238);
     background-position: 50%;
 }
 

@@ -11,24 +11,31 @@ $(document).ready(function() {
                 //if ($.scrollify.current().index() == 1) {
                     //$(".page__navigation").hide();
                // } else
-				{
-                    $(".page__navigation").show();
-                }
+				$(".page__navigation").show();
             },
             afterRender: function() {
                 //if ($.scrollify.current().index() == 1) {
                     //$(".page__navigation").hide();
                 //} else 
-				{
-                    $(".page__navigation").show();
-                }
+				$(".page__navigation").show();
             },
         });
     }());
 
     // Только для каруселей
     (function(){
-        // TODO: карусель для горизонтальных слайдов
+        // Переключение пока что реализовано стрелками на клавиатуре
+        var slider = $(".carousel").bxSlider({
+            touchEnabled: false,
+            keyboardEnabled: true,
+        });
+        // Кнопки перехода в сладе специальности
+        $(".js-go-to-who-work").click(function(){
+            // Это
+        });
+        $(".js-go-to-what-teach").click(function(){
+            // Ад
+        });
     }());
 
     // Объект с пунктами меню
@@ -107,11 +114,9 @@ $(document).ready(function() {
         });
 		
 		$(".admission").click(function() {
-			
 			//К слайду Условия поступления
 			$.scrollify.move(11);
-		
-		});
+        });
 
         // Навигационное меню
         $('.js-nav-menu-toggle').on('click', function() {
