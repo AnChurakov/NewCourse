@@ -25,16 +25,20 @@ $(document).ready(function() {
     // Только для каруселей
     (function(){
         // Переключение пока что реализовано стрелками на клавиатуре
-        var slider = $(".carousel").bxSlider({
-            touchEnabled: false,
-            keyboardEnabled: true,
-        });
-        // Кнопки перехода в сладе специальности
-        $(".js-go-to-who-work").click(function(){
-            // Это
-        });
-        $(".js-go-to-what-teach").click(function(){
-            // Ад
+        $(".carousel").each(function(num){
+            var slider = $(".carousel").eq(num).bxSlider({
+                touchEnabled: false,
+                keyboardEnabled: true,
+                controls: false,
+                nextText: "",
+                prevText: "",
+            });
+            $(".js-go-to-who-work").click(function(){
+                slider.goToNextSlide();
+            });
+            $(".js-go-to-what-teach").click(function(){
+                // Ад
+            }); 
         });
     }());
 
