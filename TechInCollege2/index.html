@@ -560,24 +560,24 @@
                     <input type="text" name="user_name" id="userName" placeholder="Введите свое имя" class="info-tech__input">
                     <div class="info-tech__form-text">Выберите желаемую специальность, профессию<span class="required"></span></div>
                     <select name="spec_select" id="specSelect" class="info-tech__select">
-                        <option value="">Строительство зданий и сооружений</option>
-                        <option value="">Электромонтер по ремонту и обслуживанию электрооборудования</option>
-                        <option value="">Мастер общестроительных работ</option>
-                        <option value="">Мастер столярно-плотничных, паркетных и стекольных работ(ТОП 50)</option>
-                        <option value="">Слесарь по ремонту строительных машин</option>
-                        <option value="">Мастер отделочных строительных и декоративных работ(ТОП 50)</option>
-                        <option value="">Сварщик</option>
-                        <option value="">Мастер по ремонту и обслуживанию инженерных систем жилищно-коммунального хозяйства(ТОП 50)</option>
-                        <option value="">Краткосрочное повышение квалификации</option>
-						<option value="">Необходима помощь в выборе</option>
+                        <option>Строительство зданий и сооружений</option>
+                        <option>Электромонтер по ремонту и обслуживанию электрооборудования</option>
+                        <option>Мастер общестроительных работ</option>
+                        <option>Мастер столярно-плотничных, паркетных и стекольных работ(ТОП 50)</option>
+                        <option>Слесарь по ремонту строительных машин</option>
+                        <option>Мастер отделочных строительных и декоративных работ(ТОП 50)</option>
+                        <option>Сварщик</option>
+                        <option>Мастер по ремонту и обслуживанию инженерных систем жилищно-коммунального хозяйства(ТОП 50)</option>
+                        <option>Краткосрочное повышение квалификации</option>
+						<option>Необходима помощь в выборе</option>
                     </select>
-                    <div class="info-tech__form-text">Ваш статус<span class="required"></span></div>
-                    <input type="text" name="user_name" id="userName" placeholder="Телефон, e-mail, ссылка на страницу в социальных сетях" class="info-tech__input">
+                    <div class="info-tech__form-text">Как с вами можно связаться?<span class="required"></span></div>
+                    <input type="text" name="user_name" id="contacts" placeholder="Телефон, e-mail, ссылка на страницу в социальных сетях" class="info-tech__input">
                     <div class="info-tech__form-text">Ваш статус<span class="required"></span></div>
                     <select name="status_select" id="statusSelect" class="info-tech__select">
-                        <option value="">Поступающий</option>
-                        <option value="">Родитель(законный представитель) поступающего</option>
-                        <option value="">Иное лицо</option>
+                        <option>Поступающий</option>
+                        <option>Родитель(законный представитель) поступающего</option>
+                        <option>Иное лицо</option>
                     </select>
                     <div class="info-tech__form-text">Даю согласие на обработку в АПОУ УР "Техникум строительных технологий" указанных мной персональных данных<span class="required"></span></div>
                     <label for="personalInfo" class="info-tech__label">
@@ -585,7 +585,7 @@
                         <span class="checkbox-custom"></span>
                         <span class="label">Да</span>
                     </label>
-                    <input type="submit" class="info-tech__submit" value="Отправить" name="submitButton">
+                    <input type="button" id="btnSub" class="info-tech__submit" value="Отправить" name="submitButton">
                 </form>
             </div>
         </div>
@@ -604,7 +604,7 @@
         </div>
         <div class="authors">
             <div class="authors__text">Сайт разработан в</div>
-            <div class="authors__logo"></div>
+            <div class="authors__logo"><img src="images/dwlogo.png" class="authors__logo"></div>
         </div>
     </div>
 <script src="js/jquery-3.2.1.min.js"></script>
