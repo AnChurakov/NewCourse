@@ -86,52 +86,49 @@ $(document).ready(function() {
             });
         }, 2000);*/
 
-//Отправка письма
- var btn = $("#btnSub").hide();
+        //Отправка письма
+        /* var btn = $("#btnSub").hide();
+        var name = $("#userName").val();
+        var select = $("#specSelect").val();
+        var selectStatus = $("#statusSelect").val();
+        var tel = $("#contacts").val();
+        var check = $("#personalInfo").val();
 
-    var name = $("#userName").val();
+        $("#personalInfo").blur(function() {
 
-    var select = $("#specSelect").val();
-
-    var selectStatus = $("#statusSelect").val();
-
-    var tel = $("#contacts").val();
-
-    var check = $("#personalInfo").val();
-
-
-$("#personalInfo").blur(function() {
-
-    if ($(this).is(":checked") && name != null && select != null && selectStatus != null && tel != null)
-    {
-        alert(1);
-        btn.show();
-        
-        btn.click(function() {
-
-            $.ajax({
-            url:"mail.php",
-            dataType:"text",
-            type:"POST",
-            data:"name="+name+"&select="+select+"&selectStatus="+selectStatus+"&tel="+tel,
-            success:function(data)
-            {
-                if (data != null)
-                {
-                    alert(data);
-                }                
+            if ($(this).is(":checked") && name != null && select != null && selectStatus != null && tel != null) {
+                alert(1);
+                btn.show();
+            
+                btn.click(function() {
+                    $.ajax({
+                        url: "mail.php",
+                        dataType: "text",
+                        type: "POST",
+                        data: "name="+name+"&select="+select+"&selectStatus="+selectStatus+"&tel="+tel,
+                        success: function(data) {
+                            if (data != null) {
+                                alert(data);
+                            }                
+                        }
+                    });
+                });     
+            } else {
+                alert("Вы заполнили не все поля!");
             }
-            });
-        });     
-    }
+        }); */
+        $("#btnSub").hide();
+        $("#personalInfo").click(function(){
+            if ($("#personalInfo").is(":checked")) {
+                $("#btnSub").show();
+            } else {
+                $("#btnSub").hide();
+            }
+        });
 
-    else
-    {
-        alert("Вы заполнили не все поля!");
-    }
-
-});
-   
+        $("#btnSub").click(function(){
+            // TODO: Ajax
+        });
 			
         $(".down-arrow__shape").eq(0).click(function(){
             $.scrollify.next();

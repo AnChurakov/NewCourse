@@ -303,7 +303,7 @@ h3 {
 }
 .navigation-menu--open .navigation-menu__bars::before {
     transform: rotate(45deg);
-  }
+}
 .navigation-menu--open .navigation-menu__bars::after {
     transform: rotate(-45deg);
 }
@@ -324,10 +324,10 @@ h3 {
 }
 .navigation-menu--open .menu-list__item:nth-child(5) {
     transition-delay: 2s;
-  }
+}
 .navigation-menu--open .menu-list__item:nth-child(6) {
     transition-delay: 2.25s;
-  }
+}
 .navigation-menu--open .menu-list__item:nth-child(7) {
     transition-delay: 2.5s;
 }
@@ -396,7 +396,7 @@ h3 {
     width: 65%;
 }
   
-  @media only screen and (max-width: 700px) {
+@media only screen and (max-width: 700px) {
     .navigation-menu {
       min-width: 240px;
       width: 80%;
@@ -404,8 +404,8 @@ h3 {
     .navigation-menu::before {
       width: 110%;
     }
-  }
-  @media only screen and (max-width: 480px) {
+}
+@media only screen and (max-width: 480px) {
     .navigation-menu {
       background-color: #0691f6;
       min-width: 240px;
@@ -627,6 +627,12 @@ h3 {
 }
 .info-tech__submit:hover {
     opacity: .8;
+}
+
+.info-tech__video {
+    width: 50%;
+    height: 100%;
+    background-color: #ff4f4f;
 }
 
 /* Скрываем реальный чекбокс */
