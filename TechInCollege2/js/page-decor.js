@@ -32,6 +32,7 @@ $(document).ready(function() {
                 controls: false,
                 nextText: "",
                 prevText: "",
+                pager: false,
             });
             $(".js-go-to-who-work").click(function(){
                 slider.goToNextSlide();
@@ -140,13 +141,12 @@ $(document).ready(function() {
 
         // Autoplay loop при наведении на "+"
         $(".js-link-hover").mouseenter(function(){
-            var video = $(this).find(".js-link-video");
-            video.attr("autoplay", "");
-            video.attr("loop", "");
+            $(this).find(".js-link-video").attr("autoplay", "");
+            $(this).find(".js-link-video").attr("loop", "");
         });
-        $(".js-link-video").mouseleave(function(){
-            $(this).removeAttr("autoplay");
-            $(this).removeAttr("loop");
+        $(".js-link-hover").mouseleave(function(){
+            $(this).find(".js-link-video").removeAttr("autoplay");
+            $(this).find(".js-link-video").removeAttr("loop");
         });
 
         // Куда идут ссылки из главного меню
