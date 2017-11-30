@@ -138,6 +138,16 @@ $(document).ready(function() {
             $.scrollify.move(slideNumber);
         });
 
+        // Autoplay loop при наведении на "+"
+        $(".js-link-hover").mouseenter(function(){
+            var video = $(this).find(".js-link-video");
+            video.attr("autoplay", "");
+            video.attr("loop", "");
+        });
+        $(".js-link-video").mouseleave(function(){
+            $(this).removeAttr("autoplay");
+            $(this).removeAttr("loop");
+        });
 
         // Куда идут ссылки из главного меню
         $(".js-go-to-info").click(function(){
@@ -153,7 +163,7 @@ $(document).ready(function() {
             $.scrollify.move(2);
         });
         $(".js-go-to-entrance").click(function(){
-			$.scrollify.move(11)
+			$.scrollify.move(11);
         });
         $(".js-go-to-contacts").click(function(){
             // К слайду с контактной информацией
