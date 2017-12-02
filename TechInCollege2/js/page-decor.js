@@ -26,19 +26,17 @@ $(document).ready(function() {
     (function(){
         // Переключение пока что реализовано стрелками на клавиатуре
         $(".carousel").each(function(num){
-            var slider = $(".carousel").eq(num).bxSlider({
-                touchEnabled: false,
-                keyboardEnabled: true,
-                controls: false,
-                nextText: "",
-                prevText: "",
-                pager: false,
+            
+            $(".carousel").eq(num).owlCarousel({
+                items: 1,
+                dots: false,
             });
+
             $(".js-go-to-who-work").click(function(){
-                slider.goToNextSlide();
+                
             });
             $(".js-go-to-what-teach").click(function(){
-                // Ад
+                
             }); 
         });
     }());
