@@ -498,6 +498,7 @@ h3 {
     align-items: left;
     position: relative;
     z-index: 700;
+    height: 100%;
 }
 .contacts:before {
     content: '';
@@ -1059,10 +1060,10 @@ video {
 }
 @media (min-width: 1600px)  {
     .links-area {
-        top: calc(var(--link-area-top-translate)*-2.5);
+        top: calc(var(--link-area-top-translate)*1.2);
     }
     .info-rect {
-        top: calc(var(--info-rect-top-translate)*2);
+        top: calc(var(--info-rect-top-translate)*.2);
     }
     .show-video {
         top: calc(var(--show-video-top-translate)*2);
@@ -1071,16 +1072,16 @@ video {
         font-size: 30px;
     }
 	.down-arrow {
-        bottom: -120%;
+        bottom: -50%;
     }
 	
 }
 @media (min-width: 1900px)  {
     .links-area {
-        top: calc(var(--link-area-top-translate)*-4.5);
+        top: calc(var(--link-area-top-translate)*1);
     }
     .info-rect {
-        top: calc(var(--info-rect-top-translate)*2.5);
+        top: calc(var(--info-rect-top-translate)*1);
     }
     .show-video {
         top: calc(var(--show-video-top-translate)*2.2);
@@ -1092,7 +1093,13 @@ video {
         width: 120%;
     }
     .down-arrow {
-        bottom: -130%;
+        bottom: -60%;
+    }
+    .text-area {
+        display: flex;
+        flex-flow: column;
+        justify-content: space-around;
+        align-items: left;
     }
     .info-tech .rect-text:before {
         width: 90%;
