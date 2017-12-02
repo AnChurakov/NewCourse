@@ -23,7 +23,7 @@ html {
     */
     --info-rect-top-translate: 90px;
     --show-video-top-translate: 120px;
-    --link-area-top-translate: -23px; 
+    --link-area-top-translate: -35px; 
 }
 body {
     height: 100%;
@@ -1024,10 +1024,10 @@ video {
 .down-arrow {
     position: absolute;
     z-index: 700;
-    bottom: -55%;
+    bottom: -25%;
     left: 25%;
     width: 50%;
-    height: 100px;
+    height: 50px;
     margin: 0 auto;
 }
 .down-arrow__shape {

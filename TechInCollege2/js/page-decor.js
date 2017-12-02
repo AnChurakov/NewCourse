@@ -6,10 +6,20 @@ $(document).ready(function() {
             css3: true,
             scrollingSpeed: 700,
             keyboardScrolling: true,
-            recordHistory: true,
+            recordHistory: false,
             sectionSelector: '.page__main',
-            slideSelector: '.slides',
-            responsiveHeight: 1,
+            slideSelector: '.slide',
+            controlArrows: false,
+            lazyLoading: true,
+        });
+    }());
+    // Переключение слайдов на специальностях
+    (function(){
+        $(".js-go-to-who-work").click(function(){
+            $.fn.fullpage.moveSlideRight();
+        });
+        $(".js-go-to-what-teach").click(function(){
+            $.fn.fullpage.moveSlideLeft();
         });
     }());
 
@@ -102,11 +112,11 @@ $(document).ready(function() {
         });
 			
         $(".down-arrow__shape").eq(0).click(function(){
-            
+            $.fn.fullpage.moveSectionDown();
         });
         $(".links-area__plus-button-tooltip").click(function(){
             var slideNumber = $(this).data("slide");
-            
+            $.fn.fullpage.moveTo(slideNumber + 1);
         });
 
         // Autoplay loop при наведении на "+"
@@ -121,28 +131,28 @@ $(document).ready(function() {
 
         // Куда идут ссылки из главного меню
         $(".js-go-to-info").click(function(){
-            
+            $.fn.fullpage.moveTo(2);
         });
 		$(".js-go-to-main").click(function(){
             // К первому и главному слайду
-            
+            $.fn.fullpage.moveTo(1);
         });
 		
         $(".js-go-to-spec").click(function(){
             // К первому слайду специальностей
-            
+            $.fn.fullpage.moveTo(3);
         });
         $(".js-go-to-entrance").click(function(){
-			
+			$.fn.fullpage.moveTo(12);
         });
         $(".js-go-to-contacts").click(function(){
             // К слайду с контактной информацией
-            
+            $.fn.fullpage.moveTo(13);
         });
 		
 		$(".admission").click(function() {
 			//К слайду Условия поступления
-			
+			$.fn.fullpage.moveTo(12);
         });
 
         // Навигационное меню
