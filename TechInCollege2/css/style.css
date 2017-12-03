@@ -78,6 +78,7 @@ ul, ol {
     background-size: cover;
     background-image: url('../images/back.png');
     background-position: 50%;
+    overflow: hidden;
 }
 .main-slide:before {
     content: '';
