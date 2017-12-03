@@ -121,12 +121,10 @@ $(document).ready(function() {
 
         // Autoplay loop при наведении на "+"
         $(".js-link-hover").mouseenter(function(){
-            $(this).find(".js-link-video").attr("autoplay", "");
-            $(this).find(".js-link-video").attr("loop", "");
+            $(this).find(".js-link-video").attr("data-autoplay", "");
         });
         $(".js-link-hover").mouseleave(function(){
-            $(this).find(".js-link-video").removeAttr("autoplay");
-            $(this).find(".js-link-video").removeAttr("loop");
+            $(this).find(".js-link-video").removeAttr("data-autoplay");
         });
 
         // Куда идут ссылки из главного меню
