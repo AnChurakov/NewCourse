@@ -25,20 +25,12 @@ $(document).ready(function() {
     // Только для каруселей
     (function(){
         // Переключение пока что реализовано стрелками на клавиатуре
-        $(".carousel").each(function(num){
-            
-            $(".carousel").eq(num).owlCarousel({
-                items: 1,
-                dots: false,
-            });
-
-            $(".js-go-to-who-work").click(function(){
+        $(".js-go-to-who-work").click(function(){
                 
-            });
-            $(".js-go-to-what-teach").click(function(){
-                
-            }); 
         });
+        $(".js-go-to-what-teach").click(function(){
+                
+        }); 
     }());
 
     // Объект с пунктами меню
