@@ -15,10 +15,10 @@ $(document).ready(function() {
     }());
     // Переключение слайдов на специальностях
     (function(){
-        $(".js-go-to-who-work").click(function(){
+        $(".js-go-to-right").click(function(){
             $.fn.fullpage.moveSlideRight();
         });
-        $(".js-go-to-what-teach").click(function(){
+        $(".js-go-to-left").click(function(){
             $.fn.fullpage.moveSlideLeft();
         });
     }());
