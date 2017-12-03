@@ -535,7 +535,7 @@ h3 {
 .authors {
     position: absolute;
     z-index: 900;
-    bottom: 35px;
+    bottom: 45px;
     left: 15px;
     display: flex;
     justify-content: space-around;
