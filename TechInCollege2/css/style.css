@@ -23,7 +23,7 @@ html {
     */
     --info-rect-top-translate: 90px;
     --show-video-top-translate: 120px;
-    --link-area-top-translate: -35px; 
+    --link-area-top-translate: -25px; 
 }
 body {
     height: 100%;
@@ -487,6 +487,10 @@ h3 {
 
 /* Основные слайды */
 
+
+.main-slide {
+    height: 100%;
+}
 /* Контакты */
 .contacts {
     background-image: url('../images/contacts_back.png');
@@ -973,7 +977,6 @@ video {
 .links-area__plus-button--9 {
     top: 220px;
 	right:-10px;
-    
 }
 /* ------ */
 
@@ -1026,7 +1029,7 @@ video {
 .down-arrow {
     position: absolute;
     z-index: 700;
-    bottom: -25%;
+    bottom: -35%;
     left: 25%;
     width: 50%;
     height: 50px;
@@ -1061,10 +1064,10 @@ video {
 }
 @media (min-width: 1600px)  {
     .links-area {
-        top: calc(var(--link-area-top-translate)*1.2);
+        top: calc(var(--link-area-top-translate)*-2.2);
     }
     .info-rect {
-        top: calc(var(--info-rect-top-translate)*.2);
+        top: calc(var(--info-rect-top-translate)*1.2);
     }
     .show-video {
         top: calc(var(--show-video-top-translate)*2);
@@ -1073,16 +1076,16 @@ video {
         font-size: 30px;
     }
 	.down-arrow {
-        bottom: -50%;
+        bottom: -100%;
     }
 	
 }
 @media (min-width: 1900px)  {
     .links-area {
-        top: calc(var(--link-area-top-translate)*1);
+        top: calc(var(--link-area-top-translate)*-4.5);
     }
     .info-rect {
-        top: calc(var(--info-rect-top-translate)*1);
+        top: calc(var(--info-rect-top-translate)*2.5);
     }
     .show-video {
         top: calc(var(--show-video-top-translate)*2.2);
@@ -1094,7 +1097,7 @@ video {
         width: 120%;
     }
     .down-arrow {
-        bottom: -60%;
+        bottom: -150%;
     }
     .text-area {
         display: flex;
@@ -1108,6 +1111,13 @@ video {
     }
     .info-tech__connect {
         padding: 65px 65px;
+    }
+    .info-tech__wrap {
+        height: 100%;
+        display: flex;
+        flex-flow: column;
+        justify-content: space-around;
+        align-items: left;
     }
 }
 /* -------------------------------*/
