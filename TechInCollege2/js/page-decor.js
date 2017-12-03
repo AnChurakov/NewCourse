@@ -120,12 +120,12 @@ $(document).ready(function() {
         });
 
         // Autoplay loop при наведении на "+"
-        /* $(".js-link-hover").mouseenter(function(){
-            $(this).find(".js-link-video").attr("loop", "");
+        $(".js-link-hover").mouseenter(function(){
+            $(this).find(".js-link-video").get(0).play();
         });
         $(".js-link-hover").mouseleave(function(){
-            $(this).find(".js-link-video").removeAttr("loop");
-        }); */
+            $(this).find(".js-link-video").get(0).pause();
+        });
 
         // Куда идут ссылки из главного меню
         $(".js-go-to-info").click(function(){
