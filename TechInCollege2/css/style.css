@@ -1119,5 +1119,8 @@ video {
         justify-content: space-around;
         align-items: left;
     }
+    .normal {
+        font-size: 20px;
+    }
 }
 /* -------------------------------*/
