@@ -201,7 +201,7 @@ h3 {
 }
 .right-text-area__text {
     width: 140%;
-    left: -39%;
+    left: -30%;
 }
 
 .buttons-area {
@@ -214,7 +214,7 @@ h3 {
 .right-text-area__text + .buttons-area {
     position: relative;
     z-index: 700;
-    left: -39%;
+    left: -30%;
 }
 
 .rect-text {
