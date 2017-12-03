@@ -556,6 +556,7 @@ h3 {
     display: flex;
     justify-content: flex-start;
     align-items: left;
+    height: 100%;
 }
 .info-tech .rect-text:before {
     width: 110%;
