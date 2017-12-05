@@ -11,6 +11,13 @@ $(document).ready(function() {
             slideSelector: '.slide',
             controlArrows: false,
             lazyLoading: true,
+            afterLoad: function(anchorLink, index){
+                if (index == 1) {
+                    $(".page__navigation").hide();
+                } else {
+                    $(".page__navigation").show();
+                }
+            },
         });
     }());
     // Переключение слайдов на специальностях
