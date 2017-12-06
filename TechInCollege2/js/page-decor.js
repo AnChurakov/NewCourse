@@ -14,8 +14,10 @@ $(document).ready(function() {
             afterLoad: function(anchorLink, index){
                 if (index == 1) {
                     $(".page__navigation").hide();
+                    $(".page__arrow").hide();
                 } else {
                     $(".page__navigation").show();
+                    $(".page__arrow").show();
                 }
             },
         });
@@ -124,6 +126,10 @@ $(document).ready(function() {
         $(".links-area__plus-button-tooltip").click(function(){
             var slideNumber = $(this).data("slide");
             $.fn.fullpage.moveTo(slideNumber + 1);
+        });
+
+        $(".js-go-to-top").click(function(){
+            $.fn.fullpage.moveTo(1);
         });
 
         // Autoplay loop при наведении на "+"
