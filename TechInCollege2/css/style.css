@@ -255,6 +255,21 @@ h3 {
     height: 100%;
     overflow: hidden;
 }
+.slide__wrap {
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.slide__text {
+    width: 50%;
+    height: 100%;
+}
+.slide__image-area {
+    width: 50%;
+    height: 100%;
+    background-color: #00a8ff;
+}
 /* ------- */
 
 /* Стрелка наверх */
@@ -1008,7 +1023,8 @@ video {
     width: 107%;
     padding-left: 55px;
 }
-.info-tech__fotos-container {
+
+.info-tech__photos-container {
     position: absolute;
     z-index: 1100;
     width: 55%;
@@ -1019,43 +1035,38 @@ video {
     justify-content: flex-start;
     align-items: center;
 }
-.info-tech__fotos-container:before {
-    content: '';
-    position: absolute;
-    z-index: 1100;
-    width: 100%;
-    height: inherit;
-    top: 0;
-    right: 0;
-    background-color: #ff4949;
-    transform: skewX(-45deg);
-    overflow: hidden;
-}
-.info-tech__foto {
+.info-tech__photo {
     position: relative;
     z-index: 1100;
     height: inherit;
-    width: calc(100%/3); 
+    width: 45%; 
+    margin-right: -95px;
+    background-size: cover;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    -webkit-clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+    clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+    transition: clip-path ease-in-out .3s;
 }
-.info-tech__foto:before {
-    content: '';
+.info-tech__photo:hover {
+    -webkit-clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
+    clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
+}
+.info-tech__photo-src {
     position: absolute;
     z-index: 1300;
+    top: 0;
     width: 100%;
     height: inherit;
-    top: 0;
-    right: 0;
-    transform: skewX(-45deg);
-    overflow: hidden;
 }
-.info-tech__foto--1:before {
-    background-color: #8049ff;
+.info-tech__photo--1 {
+    background-image: url('../images/photo-1.jpg');
 }
-.info-tech__foto--2:before {
-    background-color: #ff4967;
+.info-tech__photo--2 {
+    background-image: url('../images/photo-2.jpg');
 }
-.info-tech__foto--3:before {
-    background-color: #92ff49;
+.info-tech__photo--3 {
+    background-image: url('../images/photo-3.jpg');
 }
 
 /* ------ */
@@ -1177,15 +1188,20 @@ video {
     .info-tech__wrap {
         height: 100%;
         display: flex;
-        flex-flow: column;
         justify-content: space-around;
         align-items: left;
+    }
+    .info-tech__connect .info-tech__wrap {
+        flex-flow: column;
     }
     .normal {
         font-size: 20px;
     }
     .right-text-area__text + .buttons-area {
         bottom: 20px;
+    }
+    .info-tech__smart-rect {
+        padding: 57px 0 57px 55px;
     }
 }
 /* -------------------------------*/
