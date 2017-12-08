@@ -217,6 +217,9 @@ h3 {
     z-index: 700;
     left: -30%;
 }
+.right-text-area__text + .buttons-area .btn:before {
+    transform: skewX(20deg);
+}
 
 .rect-text {
     position: relative;
@@ -350,42 +353,6 @@ h3 {
 }
 .navigation-menu--open .menu-list__item {
     opacity: 1;
-}
-.navigation-menu--open .menu-list__item:nth-child(1) {
-    transition-delay: 1s;
-}
-.navigation-menu--open .menu-list__item:nth-child(2) {
-    transition-delay: 1.25s;
-}
-.navigation-menu--open .menu-list__item:nth-child(3) {
-    transition-delay: 1.5s;
-}
-.navigation-menu--open .menu-list__item:nth-child(4) {
-    transition-delay: 1.75s;
-}
-.navigation-menu--open .menu-list__item:nth-child(5) {
-    transition-delay: 2s;
-}
-.navigation-menu--open .menu-list__item:nth-child(6) {
-    transition-delay: 2.25s;
-}
-.navigation-menu--open .menu-list__item:nth-child(7) {
-    transition-delay: 2.5s;
-}
-.navigation-menu--open .menu-list__item:nth-child(8) {
-    transition-delay: 2.75s;
-}
-.navigation-menu--open .menu-list__item:nth-child(9) {
-    transition-delay: 3s;
-}
-.navigation-menu--open .menu-list__item:nth-child(10) {
-    transition-delay: 3.25s;
-}
-.navigation-menu--open .menu-list__item:nth-child(11) {
-    transition-delay: 3.5s;
-}
-.navigation-menu--open .menu-list__item:nth-child(12) {
-    transition-delay: 3.75s;
 }
 .navigation-menu__toggle {
     cursor: pointer;
@@ -1038,8 +1005,57 @@ video {
 	font-size: 18px;
 }
 .info-tech__smart-rect {
-    width: 100%;
+    width: 107%;
     padding-left: 55px;
+}
+.info-tech__fotos-container {
+    position: absolute;
+    z-index: 1100;
+    width: 55%;
+    height: 100%;
+    top: 0;
+    right: 10%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.info-tech__fotos-container:before {
+    content: '';
+    position: absolute;
+    z-index: 1100;
+    width: 100%;
+    height: inherit;
+    top: 0;
+    right: 0;
+    background-color: #ff4949;
+    transform: skewX(-45deg);
+    overflow: hidden;
+}
+.info-tech__foto {
+    position: relative;
+    z-index: 1100;
+    height: inherit;
+    width: calc(100%/3); 
+}
+.info-tech__foto:before {
+    content: '';
+    position: absolute;
+    z-index: 1300;
+    width: 100%;
+    height: inherit;
+    top: 0;
+    right: 0;
+    transform: skewX(-45deg);
+    overflow: hidden;
+}
+.info-tech__foto--1:before {
+    background-color: #8049ff;
+}
+.info-tech__foto--2:before {
+    background-color: #ff4967;
+}
+.info-tech__foto--3:before {
+    background-color: #92ff49;
 }
 
 /* ------ */
@@ -1167,6 +1183,9 @@ video {
     }
     .normal {
         font-size: 20px;
+    }
+    .right-text-area__text + .buttons-area {
+        bottom: 20px;
     }
 }
 /* -------------------------------*/
