@@ -140,7 +140,8 @@ h3 {
     height: 100%;
     transform: skewX(-20deg);
 }
-.btn-text {
+.btn-text,
+.btn-image {
     position: relative;
     z-index: 900;
 }
@@ -260,6 +261,7 @@ h3 {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    overflow: hidden;
 }
 .slide__text {
     width: 50%;
@@ -269,6 +271,14 @@ h3 {
     width: 50%;
     height: 100%;
     background-color: #00a8ff;
+}
+.slide__rect-text {
+    padding-left: 55px;
+    font-size: 30px;
+    font-weight: bold;
+}
+.slide__text-area {
+    padding-top: 0;
 }
 /* ------- */
 
@@ -336,6 +346,7 @@ h3 {
     background-color: transparent;
     height: 100%;
     position: fixed;
+    z-index: 1100;
     width: 600px;
     transform: translateX(-100%);
     transition: transform .3s .3s;
@@ -663,6 +674,18 @@ h3 {
 .info-tech__video {
     width: 50%;
     height: 100%;
+}
+.info-tech__button-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+.info-tech__video-button .btn-text {
+    color: #fff;
+}
+.info-tech__video-button:before {
+    background-color: #0095ff;
 }
 
 /* Скрываем реальный чекбокс */
@@ -1004,6 +1027,77 @@ video {
 }
 /* ------ */
 
+/* Модальное окно с видео */
+.modal {
+    position: relative;
+    z-index: 1500;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    cursor: pointer;
+}
+.modal__overlay {
+    position: absolute;
+    z-index: 1700;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+.modal__window {
+    width: 900px;
+    height: 500px;
+    background-color: #fbfbfb;
+    position: relative;
+    z-index: 1800;
+    overflow: hidden;
+}
+.modal__button {
+    position: absolute;
+    z-index: 1600;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.js-modal-video {
+    width: 100%;
+    height: 100%;
+}
+.info-tech-modal-wrap {
+    position: absolute;
+    z-index: 1600;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: none;
+}
+.start-video {
+    position: relative;
+    z-index: 1500;
+}
+.start-video:before {
+    background-color: #00a8ff;
+}
+.start-video__img {
+    background-image: url('../images/video-play-btn.png');
+    background-repeat: no-repeat;
+    background-size: 450%;
+    background-clip: content-box;
+    background-position: 50%;
+    width: 25px;
+    height: 25px;
+    display: block;
+    z-index: 1800;
+}
+/* ------ */
+
 /* Параллелипипед с текстом */
 .info-rect {
     position: relative;
@@ -1144,6 +1238,10 @@ video {
 	.down-arrow {
         bottom: -100%;
     }
+    .modal__window {
+        width: 1300px;
+        height: 750px;
+    }
 	
 }
 @media (min-width: 1900px)  {
@@ -1191,10 +1289,14 @@ video {
         font-size: 20px;
     }
     .right-text-area__text + .buttons-area {
-        bottom: 20px;
+        top: -40px;
     }
     .info-tech__smart-rect {
         padding: 57px 0 57px 55px;
+    }
+    .modal__window {
+        width: 1500px;
+        height: 900px;
     }
 }
 /* -------------------------------*/
