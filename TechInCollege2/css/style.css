@@ -1124,9 +1124,9 @@ video {
     width: 55%;
     height: 100%;
     top: 0;
-    right: 10%;
+    right: 7%;
     display: flex;
-    justify-content: flex-start;
+    justify-content: flex-end;
     align-items: center;
 }
 .info-tech__photo {
@@ -1134,10 +1134,6 @@ video {
     z-index: 1100;
     height: inherit;
     width: 45%; 
-    margin-right: -95px;
-    background-size: cover;
-    background-position: 50%;
-    background-repeat: no-repeat;
 }
 .info-tech__photo-src {
     position: absolute;
@@ -1145,6 +1141,9 @@ video {
     top: 0;
     width: 100%;
     height: inherit;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
 }
 .info-tech__photo--1 {
     background-image: url('../images/photo-1.jpg');
