@@ -1188,7 +1188,7 @@ video {
 .down-arrow {
     position: absolute;
     z-index: 700;
-    bottom: -35%;
+    bottom: -20%;
     left: 25%;
     width: 50%;
     height: 50px;
@@ -1235,7 +1235,7 @@ video {
         font-size: 30px;
     }
 	.down-arrow {
-        bottom: -100%;
+        bottom: -50%;
     }
     .modal__window {
         width: 1300px;
@@ -1260,7 +1260,7 @@ video {
         width: 120%;
     }
     .down-arrow {
-        bottom: -150%;
+        bottom: -100%;
     }
     .text-area {
         display: flex;
