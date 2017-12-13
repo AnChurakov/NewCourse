@@ -160,6 +160,9 @@ h3 {
 .about-btn:last-child {
     margin-right: 0;
 }
+.about-btn--red-shadow:before {
+    box-shadow: 0 8px 40px 1px rgba(255, 64, 64, .7);
+}
 
 .text-area {
     position: relative;
@@ -1210,6 +1213,9 @@ video {
 /* -------------------------------*/
 /*          Медиа запросы         */
 /* -------------------------------*/
+@media (min-width: 1280px) {
+
+}
 @media (min-width: 1280px) and (max-width: 1600px)  {
     .links-area {
         top: calc(var(--link-area-top-translate)*2.2);
@@ -1280,6 +1286,9 @@ video {
         display: flex;
         justify-content: space-around;
         align-items: left;
+    }
+    .info-tech__connect .info-tech__wrap {
+        justify-content: flex-start;
     }
     .info-tech__connect .info-tech__wrap {
         flex-flow: column;
