@@ -691,6 +691,51 @@ h3 {
     background-color: #0095ff;
 }
 
+/* Контакты */
+.all-spec {
+    height: 100%;
+    overflow: hidden;
+}
+.all-spec__wrap {
+    display: flex;
+    justify-content: flex-start;
+    height: calc(100%/3);
+}
+.all-spec__elem {
+    width: calc(100%/3);
+    height: 100%;
+    flex: 0 0 calc(100%/3);
+    background-color: #ff4949;
+    transition: transform ease-out .4s, box-shadow ease-in-out .3s;
+    box-shadow: 0 0 0 0 transparent;
+    position: relative;
+    z-index: 800;
+}
+.all-spec__elem:hover {
+    transform: scale(1.05);
+    box-shadow: 15px 5px 45px rgba(0, 0, 0, 0.2);
+    z-index: 900;
+}
+.all-spec__context {
+    position: relative;
+    z-index: 800;
+    height: 100%;
+}
+.all-spec__desc {
+    position: absolute;
+    z-index: 700;
+    width: 100%;
+    height: calc(100%/3);
+    bottom: 0;
+    left: 0;
+    padding: 25px 15px;
+}
+.all-spec__header {
+    position: relative;
+    z-index: 500;
+}
+/* -------- */
+
 /* Скрываем реальный чекбокс */
 .checkbox {
     display: none;
