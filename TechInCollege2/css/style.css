@@ -775,15 +775,18 @@ h3 {
 }
 .locksmith-img {
     background-image: url('../images/build-machine.jpg');
+    background-position: 50% 25%;
 }
 .carpenter-img {
     background-image: url('../images/plot-work.jpg');
 }
 .dry-builder-img {
     background-image: url('../images/sux-work.jpg');
+    background-position: 50% 25%;
 }
 .tech-builder-img {
     background-image: url('../images/build-zd.jpg');
+    background-position: 50% 20%;
 }  
 .electrician-img {
     background-image: url('../images/electrik.jpg');
@@ -793,6 +796,7 @@ h3 {
 }
 .housing-and-utilities-img {
     background-image: url('../images/test.jpg');
+    background-position: 50% 25%;
 }
 .common-builder-img {
     background-image: url('../images/ob.jpg');
