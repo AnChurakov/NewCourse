@@ -530,7 +530,7 @@ h3 {
 }
 /* Контакты */
 .contacts {
-    background-image: url('../images/contacts_back.png');
+    background-image: url('../images/contacts_back.jpg');
     background-repeat: no-repeat;
     background-position: 0% 10%;
     background-size: 50%;
@@ -705,11 +705,12 @@ h3 {
     width: calc(100%/3);
     height: 100%;
     flex: 0 0 calc(100%/3);
-    background-color: #ff4949;
     transition: transform ease-out .4s, box-shadow ease-in-out .3s;
     box-shadow: 0 0 0 0 transparent;
     position: relative;
     z-index: 800;
+    cursor: pointer;
+    outline: 1px solid transparent;
 }
 .all-spec__elem:hover {
     transform: scale(1.05);
@@ -723,16 +724,78 @@ h3 {
 }
 .all-spec__desc {
     position: absolute;
-    z-index: 700;
+    z-index: 800;
     width: 100%;
-    height: calc(100%/3);
+    height: 100%;
     bottom: 0;
     left: 0;
     padding: 25px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .all-spec__header {
     position: relative;
-    z-index: 500;
+    z-index: 900;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity ease-in-out .3s;
+}
+.all-spec__overlay {
+    position: absolute;
+    z-index: 950;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: opacity ease-in-out .3s;
+}
+.all-spec__elem:hover .all-spec__overlay {
+    opacity: 0;
+    z-index: 800;
+}
+.all-spec__elem:hover .all-spec__header {
+    opacity: 1;
+    z-index: 1000;
+}
+.all-spec__image {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%; 
+    position: absolute;
+    z-index: 800;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.welder-img {
+    background-image: url('../images/svargrweb.jpg');
+}
+.locksmith-img {
+    background-image: url('../images/build-machine.jpg');
+}
+.carpenter-img {
+    background-image: url('../images/plot-work.jpg');
+}
+.dry-builder-img {
+    background-image: url('../images/sux-work.jpg');
+}
+.tech-builder-img {
+    background-image: url('../images/build-zd.jpg');
+}  
+.electrician-img {
+    background-image: url('../images/electrik.jpg');
+}
+.decoration-master-img {
+    background-image: url('../images/otdel-work.jpg');
+}
+.housing-and-utilities-img {
+    background-image: url('../images/test.jpg');
+}
+.common-builder-img {
+    background-image: url('../images/ob.jpg');
 }
 /* -------- */
 
@@ -1237,8 +1300,8 @@ video {
     position: absolute;
     z-index: 700;
     bottom: -20%;
-    left: 25%;
-    width: 50%;
+    left: 37%;
+    width: 25%;
     height: 50px;
     margin: 0 auto;
 }

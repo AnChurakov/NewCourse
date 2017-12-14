@@ -139,7 +139,7 @@ $(document).ready(function() {
         $(".down-arrow__shape").eq(0).click(function(){
             $.fn.fullpage.moveSectionDown();
         });
-        $(".links-area__plus-button-tooltip").click(function(){
+        $(".js-go-to-spec-slide").click(function(){
             var slideNumber = $(this).data("slide");
             $.fn.fullpage.moveTo(slideNumber + 1);
         });
@@ -200,19 +200,19 @@ $(document).ready(function() {
 		
         $(".js-go-to-spec").click(function(){
             // К первому слайду специальностей
-            $.fn.fullpage.moveTo(3);
+            $.fn.fullpage.moveTo(4);
         });
         $(".js-go-to-entrance").click(function(){
-			$.fn.fullpage.moveTo(12);
+			$.fn.fullpage.moveTo(13);
         });
         $(".js-go-to-contacts").click(function(){
             // К слайду с контактной информацией
-            $.fn.fullpage.moveTo(13);
+            $.fn.fullpage.moveTo(14);
         });
 		
 		$(".admission").click(function() {
 			//К слайду Условия поступления
-			$.fn.fullpage.moveTo(12);
+			$.fn.fullpage.moveTo(13);
         });
 
         // Навигационное меню
