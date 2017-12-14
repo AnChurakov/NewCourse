@@ -200,7 +200,7 @@ $(document).ready(function() {
 		
         $(".js-go-to-spec").click(function(){
             // К первому слайду специальностей
-            $.fn.fullpage.moveTo(4);
+            $.fn.fullpage.moveTo(3);
         });
         $(".js-go-to-entrance").click(function(){
 			$.fn.fullpage.moveTo(13);

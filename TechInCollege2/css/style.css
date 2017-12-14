@@ -541,16 +541,6 @@ h3 {
     z-index: 700;
     height: 100%;
 }
-.contacts:before {
-    content: '';
-    position: absolute;
-    z-index: 750;
-    top: 0;
-    left: 0;
-    width: 50%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-}
 .contacts__text,
 .info-tech__text{
     font-family: GlBold, sans-serif;
@@ -786,7 +776,7 @@ h3 {
 }
 .tech-builder-img {
     background-image: url('../images/build-zd.jpg');
-    background-position: 50% 20%;
+    background-position: 50% 2%;
 }  
 .electrician-img {
     background-image: url('../images/electrik.jpg');
@@ -796,7 +786,7 @@ h3 {
 }
 .housing-and-utilities-img {
     background-image: url('../images/test.jpg');
-    background-position: 50% 25%;
+    background-position: 50% 35%;
 }
 .common-builder-img {
     background-image: url('../images/ob.jpg');
