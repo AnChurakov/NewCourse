@@ -730,6 +730,7 @@ h3 {
     z-index: 900;
     font-weight: bold;
     transition: opacity ease-in-out .3s;
+    text-align: center;
 }
 .all-spec__image {
     background-repeat: no-repeat;
@@ -1297,7 +1298,7 @@ video {
 /* Картинки для слайдов "Чему научат" */
 .slide__image-area {
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
     background-position: 50% 50%;
 }
 .welder-what-teach-img {
