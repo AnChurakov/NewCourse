@@ -2,6 +2,7 @@ $(document).ready(function() {
     
     // Только для скроллинга
     (function(){
+        var currentSlide = 0;
         $(".full-page").eq(0).fullpage({
             css3: true,
             scrollingSpeed: 700,
@@ -19,6 +20,22 @@ $(document).ready(function() {
                     $(".page__navigation").show();
                     $(".page__arrow").show();
                 }
+                if (currentSlide == 0) {
+                    $(this).parent().parent().parent().find(".arrow-left").hide();
+                }
+            },
+            afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){
+                if (slideIndex == 0) {
+                    $(this).parent().parent().parent().find(".arrow-left").hide();
+                    $(this).parent().parent().parent().find(".arrow-right").show();
+                } else if (slideIndex == 2) {
+                    $(this).parent().parent().parent().find(".arrow-left").show();
+                    $(this).parent().parent().parent().find(".arrow-right").hide();
+                } else {
+                    $(this).parent().parent().parent().find(".arrow-left").show();
+                    $(this).parent().parent().parent().find(".arrow-right").show();
+                }
+                currentSlide = slideIndex;
             },
             onLeave: function(index, nextIndex, direction){
                 if (index == 2 && $(".info-tech-modal-wrap").css("display") == "flex") {
