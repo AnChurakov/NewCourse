@@ -616,6 +616,7 @@ h3 {
     position: relative;
     z-index: 700;
     height: 100%;
+    overflow: hidden;
 }
 .info-tech__wrap {
     display: flex;
