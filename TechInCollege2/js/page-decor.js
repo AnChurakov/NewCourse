@@ -5,7 +5,7 @@ $(document).ready(function() {
         var currentSlide = 0;
         $(".full-page").eq(0).fullpage({
             css3: true,
-            scrollingSpeed: 700,
+            scrollingSpeed: 1000,
             keyboardScrolling: true,
             recordHistory: false,
             sectionSelector: '.page__main',
