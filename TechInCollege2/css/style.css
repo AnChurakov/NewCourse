@@ -305,6 +305,11 @@ h3 {
     cursor: pointer;
     background-repeat: no-repeat;
     background-size: cover;
+    opacity: .45;
+    transition: opacity ease-in-out .2s;
+}
+.slides__arrow:hover {
+    opacity: 1;
 }
 .arrow-left {
     left: 15px;
@@ -1333,7 +1338,7 @@ video {
     background-position: 50% 50%;
 }
 .welder-what-teach-img {
-
+    background-image: url('../images/svar.jpg');
 }
 .locksmith-what-teach-img {
     background-image: url('../images/stolyar.jpg');
@@ -1348,7 +1353,7 @@ video {
     
 }
 .electrician-what-teach-img {
-    
+    background-image: url('../images/electric-what-t.jpg');
 }
 .decoration-what-teach-img {
     background-image: url('../images/otdel-work_what-t.jpg');
@@ -1422,7 +1427,6 @@ video {
     .text-area {
         display: flex;
         flex-flow: column;
-        justify-content: space-around;
         align-items: left;
     }
     .info-tech .rect-text:before {
