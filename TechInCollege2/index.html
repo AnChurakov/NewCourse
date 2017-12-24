@@ -191,15 +191,7 @@
                 </div>
                 <div class="info-tech-modal-wrap modal">
                     <div class="modal__overlay js-modal-overlay"></div>
-                    <div class="modal__window js-modal">
-                        <video preload="metadata" loop class="js-modal-video" width="700px" height="500px" style="object-fit: cover;">
-                            <source src="video/test].mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
-                        </video>
-                        <div class="modal__button js-modal-buttons">
-                            <div class="btn start-video js-start-video">
-                                <span class="btn-image start-video__img"></span>
-                            </div>
-                        </div>
+                    <div class="modal__window js-modal" id="ytplayer">
                     </div>
                 </div>
                 <div class="info-tech__wrap">
@@ -307,7 +299,7 @@
             <div class="slide__slides slides">
                 <div class="slides__arrows">
                     <div class="slides__arrow arrow-left js-go-to-left"></div>
-                    <div class="slides__arrow arrow-right js-go-to-right"></div>
+                    <div class="slides__arrow arrow-right arrow-right-white js-go-to-right"></div>
                 </div>
                 <div class="slide welder">
                     <div class="text-area left-text-area">
@@ -497,7 +489,7 @@
             <div class="slide__slides slides">
                 <div class="slides__arrows">
                     <div class="slides__arrow arrow-left js-go-to-left"></div>
-                    <div class="slides__arrow arrow-right js-go-to-right"></div>
+                    <div class="slides__arrow arrow-right arrow-right-white js-go-to-right"></div>
                 </div>
                 <div class="slide carpenter">
                     <div class="text-area left-text-area">
@@ -679,7 +671,7 @@
             <div class="slide__slides slides">
                 <div class="slides__arrows">
                     <div class="slides__arrow arrow-left js-go-to-left"></div>
-                    <div class="slides__arrow arrow-right js-go-to-right"></div>
+                    <div class="slides__arrow arrow-right arrow-right-white js-go-to-right"></div>
                 </div>
                 <div class="slide builder">
                     <div class="text-area left-text-area">
@@ -862,7 +854,7 @@
             <div class="slide__slides slides">
                 <div class="slides__arrows">
                     <div class="slides__arrow arrow-left js-go-to-left"></div>
-                    <div class="slides__arrow arrow-right js-go-to-right"></div>
+                    <div class="slides__arrow arrow-right arrow-right-white js-go-to-right"></div>
                 </div>
                 <div class="slide otdel">
                     <div class="text-area left-text-area">
@@ -1046,7 +1038,7 @@
             <div class="slide__slides slides">
                 <div class="slides__arrows">
                     <div class="slides__arrow arrow-left js-go-to-left"></div>
-                    <div class="slides__arrow arrow-right js-go-to-right"></div>
+                    <div class="slides__arrow arrow-right arrow-right-white js-go-to-right"></div>
                 </div>
                 <div class="slide ob-stroy">
                     <div class="text-area left-text-area">
@@ -1212,5 +1204,33 @@
 <script src="js/jquery.fullpage.extensions.min.js"></script>
 <script src="js/jquery.fullpage.min.js"></script>
 <script src="js/page-decor.js"></script>
+<script async src="https://www.youtube.com/iframe_api"></script>
+<script>
+    var player;
+    function onYouTubeIframeAPIReady() {
+        player = new YT.Player('ytplayer', {
+            height: '315',
+            width: '560',
+            videoId: 'NaYQB1rS8-k',
+            events: {
+                'onReady': onPlayerReady,
+                'onStateChange': onPlayerStateChange,
+            }
+        });
+    }
+    function onPlayerReady(event) {
+        //event.target.playVideo();
+    }
+    var done = false;
+    function onPlayerStateChange(event) {
+        if (event.data == YT.PlayerState.PLAYING && !done) {
+        //setTimeout(stopVideo, 6000);
+        done = true;
+        }
+    }
+    function stopVideo() {
+        player.stopVideo();
+    }
+</script>
 </body>
 </html>

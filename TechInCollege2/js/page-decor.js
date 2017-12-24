@@ -28,12 +28,18 @@ $(document).ready(function() {
                 if (slideIndex == 0) {
                     $(this).parent().parent().parent().find(".arrow-left").hide();
                     $(this).parent().parent().parent().find(".arrow-right").show();
+                    if ((index + 1) % 2 == 0) {
+                        $(this).parent().parent().parent().find(".arrow-right").removeClass("arrow-right-white");
+                    }
                 } else if (slideIndex == 2) {
                     $(this).parent().parent().parent().find(".arrow-left").show();
                     $(this).parent().parent().parent().find(".arrow-right").hide();
                 } else {
                     $(this).parent().parent().parent().find(".arrow-left").show();
                     $(this).parent().parent().parent().find(".arrow-right").show();
+                    if (!$(this).parent().parent().parent().find(".arrow-right").hasClass("arrow-right-white")) {
+                        $(this).parent().parent().parent().find(".arrow-right").addClass("arrow-right-white");
+                    }
                 }
                 currentSlide = slideIndex;
             },
@@ -41,20 +47,19 @@ $(document).ready(function() {
                 if (index == 2 && $(".info-tech-modal-wrap").css("display") == "flex") {
                     if (confirm("Точно точно точно покинуть слайд?")) {
                         $(".info-tech-modal-wrap").hide();
-                        $(".js-modal-video").eq(0).get(0).pause();
-                        $(".js-modal-buttons").css({
-                            display: "flex",
-                        });
-                    } else {
-                        $(".js-modal-video").eq(0).get(0).pause();
-                        $(".js-modal-buttons").css({
-                            display: "flex",
-                        });
+                        stopVideo();
                     }
                 }
             },
         });
     }());
+
+    // --- YouTube Iframe API
+
+    
+
+    // ---
+
     // Переключение слайдов на специальностях
     (function(){
         $(".js-go-to-right").click(function(){
@@ -180,30 +185,10 @@ $(document).ready(function() {
             });
         });
         $(".js-modal-overlay").click(function(){
-            $(".info-tech-modal-wrap").hide();
-            $(".js-modal-video").eq(0).get(0).pause();
-            $(".js-modal-buttons").css({
-                display: "flex",
-            });
-        });
-        $(".js-start-video").click(function(){
-            $(".js-modal-video").eq(0).get(0).play();
-            $(this).animate({
-                right: "-=35px",
-                opacity: ".1"
-            }, 250, function() {
-                $(".js-modal-buttons").hide();
-                $(this).css({
-                    right: "0",
-                    opacity: "1"
-                });
-            });
-        });
-        $(".js-modal-video").eq(0).click(function(){
-            $(".js-modal-video").eq(0).get(0).pause();
-            $(".js-modal-buttons").css({
-                display: "flex",
-            });
+            if (confirm("Закрыть видео?")) {
+                $(".info-tech-modal-wrap").hide();
+                stopVideo();
+            }
         });
 
         // Куда идут ссылки из главного меню
