@@ -99,6 +99,7 @@ $(document).ready(function() {
     
     // События
     (function(){
+	
         /* setInterval(function(){
             $(".down-arrow__shape").eq(0).animate({
                 top: "-=10px",
@@ -224,8 +225,9 @@ $(document).ready(function() {
         });
         $(".js-go-to-contacts").click(function(){
             // К слайду с контактной информацией
-            $.fn.fullpage.moveTo(14);
-        });
+         $.fn.fullpage.moveTo(14);
+		  
+       });
 		
 		$(".admission").click(function() {
 			//К слайду Условия поступления
