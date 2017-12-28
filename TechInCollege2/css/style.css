@@ -210,7 +210,7 @@ h3 {
 }
 .right-text-area__text {
   width: 140%;
-  left: -30%;
+  left: -38%;
 }
 
 .buttons-area {
@@ -288,6 +288,7 @@ h3 {
 }
 .slide__text-area {
   padding-top: 0;
+  padding-left: 75px;
 }
 .slides__arrows {
   position: absolute;
@@ -725,7 +726,7 @@ h3 {
   background-color: #0095ff;
 }
 
-/* Контакты */
+/* Специальности */
 .all-spec {
   height: 100%;
   overflow: hidden;
@@ -1371,10 +1372,18 @@ video {
   .down-arrow {
     bottom: -100%;
   }
+  .square {
+    width: 130%;
+    height: 130%;
+  }
   .square-right {
-    top: 35%;
-    right: -34%;
+    top: 37%;
+    right: -20%;
     transform: rotate(70deg) skewX(45deg);
+  }
+  .square-left {
+    left: -35%;
+    top: -80%;
   }
   .welder,
   .machinist,
@@ -1414,6 +1423,10 @@ video {
   }
   .ob-stroy {
     background-position-x: 165%;
+  }
+  .contacts {
+    background-position: -400px 50%;
+    background-size: cover;
   }
 }
 @media (min-width: 1366px) and (max-width: 1600px) {
