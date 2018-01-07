@@ -1,0 +1,161 @@
+/*
+    
+    Experimental
+
+*/
+
+/* Шрифты */
+@font-face {
+  font-family: GlBold;
+  src: url("../fonts/glbold.otf");
+}
+
+@font-face {
+  font-family: GlLight;
+  src: url("../fonts/glight.otf");
+}
+/* По умолчанию */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+}
+ul,
+ol {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.row {
+  display: flex;
+}
+.h1,
+.h2,
+.h3,
+h1,
+h2,
+h3 {
+  font-family: GlBold, sans-serif;
+}
+.text {
+  line-height: 1.5;
+  font-family: GlLight, sans-serif;
+  line-height: 1.5;
+  padding: 20px 0 0;
+  font-size: 16px;
+  color: #000;
+}
+.btn {
+  padding: 17px 25px;
+  font-size: 15px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: all ease-out 0.3s;
+  position: relative;
+  z-index: 900;
+  background-color: transparent;
+}
+/* Шапка */
+.header__panel {
+  justify-content: space-between;
+  align-items: center;
+}
+.header__menu,
+.header__logo {
+  width: 55px;
+  height: 55px;
+}
+.header__head {
+  height: 350px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-image: url("../imgs/header-bg.jpg");
+  justify-content: center;
+  align-items: center;
+}
+.header__desc {
+  text-align: center;
+  width: 400px;
+}
+.header__h1 {
+  color: #fff;
+  font-size: 35px;
+  margin: 25px 0;
+}
+.header__rect {
+  background-color: rgba(11, 160, 255, .5);
+  color: #fff;
+  font-family: GlLight, sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 1.3;
+  padding: 25px;
+}
+/* Номер телефона */
+.tel {
+  font-family: GlBold, sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+}
+/* Главное меню */
+.menu {
+  background-color: #0ba0ff;
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: 50% 50%;
+  background-clip: padding-box;
+  padding: 15px;
+  background-image: url("../imgs/burger-menu.png");
+  cursor: pointer;
+}
+/* Лого */
+.logo {
+  background-repeat: no-repeat;
+  background-size: 65%;
+  background-position: 50% 50%;
+  background-clip: padding-box;
+  padding: 15px;
+  background-image: url("../imgs/logo.png");
+  cursor: pointer;
+}
+/* Скрываем реальный чекбокс */
+.checkbox {
+  display: none;
+}
+.checkbox-custom {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ccc;
+  border-radius: 3px;
+}
+.checkbox-custom,
+.label {
+  display: inline-block;
+  vertical-align: middle;
+}
+.checkbox:checked + .checkbox-custom::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  bottom: 2px;
+  left: 2px;
+  background: #0095ff;
+  border-radius: 2px;
+}
+/* Форма подачи заявки */
