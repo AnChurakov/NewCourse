@@ -120,6 +120,34 @@ h3 {
   padding: 15px;
   background-image: url("../imgs/burger-menu.png");
   cursor: pointer;
+  position: relative;
+  z-index: 900;
+}
+.menu__list {
+  position: absolute;
+  z-index: 900;
+  top: 55px;
+  left: 0;
+}
+.menu__item {
+  position: relative;
+  z-index: 950;
+  left: -120px;
+  opacity: 0;
+}
+.menu__link {
+  display: block;
+  position: relative;
+  z-index: 1000;
+  left: 0;
+  padding: 25px 35px;
+  color: #fff;
+  font-family: GlLight, sans-serif;
+  font-size: 18px;
+  background-color: #0ba0ff;
+}
+.menu__link:hover {
+  background-color: #52bdff;
 }
 /* Лого */
 .logo {
