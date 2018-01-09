@@ -112,7 +112,7 @@ h3 {
   margin: 25px 0;
 }
 .header__rect {
-  background-color: rgba(11, 160, 255, .5);
+  background-color: rgba(11, 160, 255, 0.5);
   color: #fff;
   font-family: GlLight, sans-serif;
   font-weight: bold;
@@ -144,13 +144,12 @@ h3 {
   position: absolute;
   z-index: 900;
   top: 55px;
-  left: 0;
+  left: -300px;
 }
 .menu__item {
   position: relative;
   z-index: 950;
-  left: -120px;
-  opacity: 0;
+  right: 0;
 }
 .menu__link {
   display: block;
@@ -162,6 +161,7 @@ h3 {
   font-family: GlLight, sans-serif;
   font-size: 18px;
   background-color: #0ba0ff;
+  width: 300px;
 }
 .menu__link:hover {
   background-color: #52bdff;
@@ -233,7 +233,7 @@ h3 {
 .spec__lever-arrow {
   width: 15px;
   height: 13px;
-  background-image: url('../imgs/spec-open-arrow.png');
+  background-image: url("../imgs/spec-open-arrow.png");
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: 100%;
@@ -243,9 +243,28 @@ h3 {
   right: 55px;
   padding: 30px 0;
 }
+.spec__lever-arrow--opened {
+  background-image: url("../imgs/spec-open-arrow-opened.png");
+}
 .spec__content {
   display: none;
 }
-.spec__desc {
+.spec__desc,
+.spec__tab {
   padding: 0 15px 15px;
+}
+.spec__buttons {
+  text-align: center;
+}
+.spec__btn {
+  background-color: #ff4343;
+  border-radius: 27px;
+  color: #fff;
+  margin-bottom: 25px;
+}
+.spec__btn:nth-child(3n) {
+  margin-bottom: 0;
+}
+.spec__btn:hover {
+  background-color: #d62828;
 }

@@ -1,27 +1,32 @@
 $(document).ready(function() {
-  // Полная дичь
   var menu = {
     button: $(".js-toggle-menu"),
     links: $(".js-link"),
     open: function() {
       menu.links.each(function(key) {
         if (!menu.links.eq(key).hasClass("menu__link--show")) {
-          menu.links.eq(key).animate(
-            {
-              opacity: "1"
-            },
-            {
-              duration: 100,
-              step: function() {
-                menu.links.eq(key).animate(
-                  {
-                    left: "0"
-                  },
-                  parseInt(key + "00", 10) + 250
-                );
+          menu.links
+            .eq(key)
+            .parent()
+            .animate(
+              {
+                opacity: "1"
+              },
+              {
+                duration: 100,
+                step: function() {
+                  menu.links
+                    .eq(key)
+                    .stop()
+                    .animate(
+                      {
+                        right: "-300px"
+                      },
+                      parseInt(key + "00", 10) + 250
+                    );
+                }
               }
-            }
-          );
+            );
           menu.links.eq(key).addClass("menu__link--show");
         }
       });
@@ -30,14 +35,29 @@ $(document).ready(function() {
     close: function() {
       menu.links.each(function(key) {
         if (menu.links.eq(key).hasClass("menu__link--show")) {
-          menu.links.eq(key).animate(
-            {
-              left: "-120px",
-              opacity: "0"
-            },
-            90
-          );
           menu.links.eq(key).removeClass("menu__link--show");
+          menu.links
+            .eq(key)
+            .parent()
+            .animate(
+              {
+                opacity: "1"
+              },
+              {
+                duration: 100,
+                step: function() {
+                  menu.links
+                    .eq(key)
+                    .stop()
+                    .animate(
+                      {
+                        right: "0"
+                      },
+                      parseInt(key + "00", 10) + 250
+                    );
+                }
+              }
+            );
         }
       });
       menu.button.removeClass("menu--opened");
@@ -65,6 +85,9 @@ $(document).ready(function() {
         .parent()
         .find(".spec__content")
         .slideUp(500);
+      $(this)
+        .find(".spec__lever-arrow")
+        .removeClass("spec__lever-arrow--opened");
     } else {
       $(".spec__part").each(function(num) {
         if (
@@ -79,6 +102,10 @@ $(document).ready(function() {
             .eq(num)
             .find(".spec__content")
             .slideUp(500);
+          $(".spec__part")
+            .eq(num)
+            .find(".spec__lever-arrow")
+            .removeClass("spec__lever-arrow--opened");
         }
       });
       $(this)
@@ -88,6 +115,9 @@ $(document).ready(function() {
         .parent()
         .find(".spec__content")
         .slideDown(500);
+      $(this)
+        .find(".spec__lever-arrow")
+        .addClass("spec__lever-arrow--opened");
     }
   });
 });
