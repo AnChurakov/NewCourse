@@ -56,7 +56,7 @@ h3 {
   color: #000;
 }
 .btn {
-  padding: 17px 25px;
+  padding: 13px 40px;
   font-size: 15px;
   font-weight: bold;
   border: none;
@@ -65,11 +65,27 @@ h3 {
   position: relative;
   z-index: 900;
   background-color: transparent;
+  font-family: GlBold, sans-serif;
+}
+.blue-header {
+  color: #fff;
+  font-family: GlBold, sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  background-color: #0095ff;
+  padding: 18px 0;
 }
 /* Шапка */
 .header__panel {
   justify-content: space-between;
   align-items: center;
+  position: fixed;
+  z-index: 940;
+  background-color: #fff;
+  width: 100%;
+  top: 0;
+  left: 0;
 }
 .header__menu,
 .header__logo {
@@ -84,6 +100,7 @@ h3 {
   background-image: url("../imgs/header-bg.jpg");
   justify-content: center;
   align-items: center;
+  margin-top: 55px;
 }
 .header__desc {
   text-align: center;
@@ -186,4 +203,49 @@ h3 {
   background: #0095ff;
   border-radius: 2px;
 }
-/* Форма подачи заявки */
+/* Информация о техникуме */
+.info__desc {
+  padding: 15px 55px;
+}
+.info__start-video {
+  text-align: center;
+  padding: 55px 0;
+}
+.info__btn {
+  background-color: #0095ff;
+  border-radius: 25px;
+  color: #fff;
+}
+/* */
+.spec__lever {
+  font-family: GlLight, sans-serif;
+  font-size: 19px;
+  padding: 17px 45px;
+  border: 1px solid rgb(170, 170, 170);
+  margin-top: -1px;
+  cursor: pointer;
+  position: relative;
+  z-index: 900;
+}
+.spec__lever:hover {
+  background-color: rgb(250, 250, 250);
+}
+.spec__lever-arrow {
+  width: 15px;
+  height: 13px;
+  background-image: url('../imgs/spec-open-arrow.png');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 100%;
+  position: absolute;
+  z-index: 900;
+  top: 0;
+  right: 55px;
+  padding: 30px 0;
+}
+.spec__content {
+  display: none;
+}
+.spec__desc {
+  padding: 0 15px 15px;
+}
