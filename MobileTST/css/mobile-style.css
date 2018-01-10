@@ -130,15 +130,38 @@ h3 {
 /* Главное меню */
 .menu {
   background-color: #0ba0ff;
-  background-repeat: no-repeat;
-  background-size: 50%;
-  background-position: 50% 50%;
-  background-clip: padding-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 15px;
-  background-image: url("../imgs/burger-menu.png");
   cursor: pointer;
   position: relative;
   z-index: 900;
+}
+.menu__bars {
+  width: 25px;
+  height: 17px;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 920;
+}
+.menu__bar {
+  width: 100%;
+  height: 3px;
+  background-color: #fff;
+  transition: transform ease-in-out 0.3s;
+}
+.menu--opened .menu__bar:nth-child(2) {
+  display: none;
+}
+.menu--opened .menu__bar:nth-child(1) {
+  transform: translateY(7px) rotate(-45deg);
+}
+.menu--opened .menu__bar:nth-child(3) {
+  transform: translateY(-7px) rotate(45deg);
 }
 .menu__list {
   position: absolute;
@@ -184,7 +207,7 @@ h3 {
   position: relative;
   width: 20px;
   height: 20px;
-  border: 2px solid #ccc;
+  border: 2px solid #0095ff;
   border-radius: 3px;
 }
 .checkbox-custom,
@@ -216,7 +239,7 @@ h3 {
   border-radius: 25px;
   color: #fff;
 }
-/* */
+/* Специальности */
 .spec__lever {
   font-family: GlLight, sans-serif;
   font-size: 19px;
@@ -253,6 +276,12 @@ h3 {
 .spec__tab {
   padding: 0 15px 15px;
 }
+.spec__tab {
+  display: none;
+}
+.spec__tab--selected {
+  display: block;
+}
 .spec__buttons {
   text-align: center;
 }
@@ -261,10 +290,79 @@ h3 {
   border-radius: 27px;
   color: #fff;
   margin-bottom: 25px;
+  margin-left: 15px;
+  margin-right: 15px;
 }
 .spec__btn:nth-child(3n) {
   margin-bottom: 0;
 }
 .spec__btn:hover {
   background-color: #d62828;
+}
+/* Условия поступления */
+.conditions__form {
+  display: block;
+}
+.conditions__input,
+.conditions__select,
+.conditions__label-checkbox {
+  width: 100%;
+  display: block;
+  border: none;
+  padding: 15px 0 10px;
+  font-family: GlLight, sans-serif;
+  font-size: 19px;
+  color: rgb(107, 107, 107);
+  position: relative;
+  z-index: 900;
+}
+.conditions__input,
+.conditions__select {
+  border-bottom: 3px solid #8eceff;
+}
+.conditions__label-hiden {
+  display: block;
+  position: relative;
+  z-index: 910;
+}
+.conditions__label-hiden:after {
+  content: "";
+  position: absolute;
+  z-index: 920;
+  width: 100%;
+  height: 3px;
+  background-color: #0095ff;
+  left: 0;
+  bottom: 0;
+  transform: scaleX(0);
+  transition: transform ease-in-out 0.6s;
+}
+.conditions__input:focus,
+.conditions__select:focus,
+.conditions__label-hiden:focus {
+  outline: none;
+}
+.conditions__label-hiden:hover:after {
+  transform: scaleX(1);
+}
+.conditions__text,
+.conditions__form {
+  padding: 25px 55px;
+}
+.conditions__button {
+  border-radius: 27px;
+  color: #fff;
+  background-color: #0095ff;
+}
+
+/* Подвал */
+.footer {
+  background-color: #343434;
+  text-align: center;
+  padding: 15px 0;
+}
+.footer__text {
+  color: #fff;
+  font-family: GlLight, sans-serif;
+  font-size: 17px;
 }

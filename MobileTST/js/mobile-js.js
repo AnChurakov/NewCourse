@@ -120,4 +120,37 @@ $(document).ready(function() {
         .addClass("spec__lever-arrow--opened");
     }
   });
+  // Костыльные табы
+  $(".js-open-second-tab").click(function() {
+    $(this)
+      .parent()
+      .parent()
+      .find(".spec__tabs")
+      .find(".spec__tab")
+      .eq(0)
+      .addClass("spec__tab--selected");
+    $(this)
+      .parent()
+      .parent()
+      .find(".spec__tabs")
+      .find(".spec__tab")
+      .eq(1)
+      .removeClass("spec__tab--selected");
+  });
+  $(".js-open-third-tab").click(function() {
+    $(this)
+      .parent()
+      .parent()
+      .find(".spec__tabs")
+      .find(".spec__tab")
+      .eq(0)
+      .removeClass("spec__tab--selected");
+    $(this)
+      .parent()
+      .parent()
+      .find(".spec__tabs")
+      .find(".spec__tab")
+      .eq(1)
+      .addClass("spec__tab--selected");
+  });
 });
