@@ -194,12 +194,12 @@ $(document).ready(function() {
 	
 	if (!$("#next").hasClass("active"))
 	{
-		$("#next").slideDown("slow");
+		$("#next").slideDown("slow").addClass("active");
 		$("#btn-next").text("Скрыть");
 	}
 	else
 	{
-		$("#next").slideUp("slow");
+		$("#next").slideUp("slow").removeClass("active");
 		$("#btn-next").text("Подробнее");
 	}
   
