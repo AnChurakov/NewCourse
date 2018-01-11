@@ -214,6 +214,7 @@ h3 {
 .label {
   display: inline-block;
   vertical-align: middle;
+  font-size:16px;
 }
 .checkbox:checked + .checkbox-custom::before {
   content: "";
@@ -238,6 +239,10 @@ h3 {
   background-color: #0095ff;
   border-radius: 25px;
   color: #fff;
+}
+.link {
+	color:#009cff;
+	text-decoration:underline;
 }
 /* Специальности */
 .spec__lever {

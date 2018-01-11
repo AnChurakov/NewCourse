@@ -153,4 +153,15 @@ $(document).ready(function() {
       .eq(1)
       .addClass("spec__tab--selected");
   });
+  
+  
+  //Кнопка подробнее
+  
+  $("#next").hide();
+  
+  $("#btn-next").click(function() {
+	
+	$("#next").slideToggle("slow");
+  
+  }); 
 });
