@@ -394,16 +394,20 @@ h3 {
   background-color: #f5f5f5;
 }
 .contacts__desc {
-  justify-content: space-between;
-  align-items: center;
+  /* justify-content: space-between;
+  align-items: center; */
   padding: 35px 15px 75px;
 }
 .contacts__desc .text {
   font-size: 17px;
 }
-.contacts__col {
-  flex-basis: 100%;
+.contacts__desc .link {
+  display: block;
+  text-align: center;
 }
+/* .contacts__col {
+  flex-basis: 100%;
+} */
 /* Подвал */
 .footer {
   background-color: #343434;
