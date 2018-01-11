@@ -243,6 +243,11 @@ h3 {
 .link {
 	color:#009cff;
 	text-decoration:underline;
+	background:none;
+	border:none;
+}
+.link:hover{
+ cursor:pointer;
 }
 /* Специальности */
 .spec__lever {

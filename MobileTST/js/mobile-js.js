@@ -192,7 +192,16 @@ $(document).ready(function() {
   
   $("#btn-next").click(function() {
 	
-	$("#next").slideToggle("slow");
+	if (!$("#next").hasClass("active"))
+	{
+		$("#next").slideDown("slow");
+		$("#btn-next").text("Скрыть");
+	}
+	else
+	{
+		$("#next").slideUp("slow");
+		$("#btn-next").text("Подробнее");
+	}
   
   }); 
 });
