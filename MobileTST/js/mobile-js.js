@@ -154,6 +154,15 @@ $(document).ready(function() {
       .addClass("spec__tab--selected");
   });
 
+  $(".conditions__button").eq(0).hide();
+  $("#c_pers_info").click(function() {
+    if ($("#c_pers_info").is(":checked")) {
+      $(".conditions__button").eq(0).show();
+    } else {
+      $(".conditions__button").eq(0).hide();
+    }
+  });
+
   //скролл к блокам
 
   $("#main").click(function() {
@@ -206,19 +215,23 @@ $(document).ready(function() {
   // Кнопка наверх
   $(window).scroll(function() {
     if ($(".js-scroll-top").offset().top > $(window).height()) {
-      $(".js-scroll-top").stop().animate(
-        {
-          bottom: "0"
-        },
-        500
-      );
+      $(".js-scroll-top")
+        .stop()
+        .animate(
+          {
+            bottom: "0"
+          },
+          500
+        );
     } else {
-      $(".js-scroll-top").stop().animate(
-        {
-          bottom: "-75px"
-        },
-        200
-      );
+      $(".js-scroll-top")
+        .stop()
+        .animate(
+          {
+            bottom: "-75px"
+          },
+          200
+        );
     }
   });
   $(".js-scroll-top")
@@ -229,12 +242,14 @@ $(document).ready(function() {
         1500,
         function() {
           if ($(".js-scroll-top").offset().top == $(window).height()) {
-            $(".js-scroll-top").stop().animate(
-              {
-                bottom: "-75px"
-              },
-              500
-            );
+            $(".js-scroll-top")
+              .stop()
+              .animate(
+                {
+                  bottom: "-75px"
+                },
+                500
+              );
           }
         }
       );

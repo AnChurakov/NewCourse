@@ -128,7 +128,7 @@ h3 {
   width: 55px;
   height: 55px;
   background-color: #0ba0ff;
-  background-image: url('../imgs/arrow.png');
+  background-image: url("../imgs/arrow.png");
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: 50%;
@@ -211,7 +211,7 @@ h3 {
   background-position: 50% 50%;
   background-clip: padding-box;
   padding: 15px;
-  background-image: url("../imgs/logo.png");
+  /* background-image: url("../imgs/logo.png"); */
   cursor: pointer;
 }
 /* Скрываем реальный чекбокс */
@@ -248,7 +248,7 @@ h3 {
 }
 .info__start-video {
   text-align: center;
-  padding: 55px 0;
+  padding: 35px 0;
 }
 .info__btn {
   background-color: #0095ff;
@@ -289,7 +289,7 @@ h3 {
   position: absolute;
   z-index: 900;
   top: 0;
-  right: 55px;
+  right: 15px;
   padding: 30px 0;
 }
 .spec__lever-arrow--opened {
@@ -320,11 +320,12 @@ h3 {
   padding-left: 0;
   padding-right: 0;
   text-align: center;
-  width: 50%;
-  margin-bottom: 15px;
+  width: 46%;
+  margin: 0 2% 1%;
 }
 .spec__btn--cond {
-  width: 100%;
+  width: 96%;
+  margin: 0 2% 1%;
 }
 .spec__btn:hover {
   background-color: #d62828;
