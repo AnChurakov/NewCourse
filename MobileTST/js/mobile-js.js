@@ -154,6 +154,37 @@ $(document).ready(function() {
       .addClass("spec__tab--selected");
   });
   
+  //скролл к блокам
+  
+  $("#glav").click(function() {
+  
+   $('html, body').animate({scrollTop: $(".header__head").offset().top}, 2000);
+   
+  });
+  
+   $("#info").click(function() {
+  
+   $('html, body').animate({scrollTop: $(".info").offset().top}, 2000);
+   
+  });
+  
+   $("#spec").click(function() {
+  
+   $('html, body').animate({scrollTop: $(".spec").offset().top}, 2000);
+   
+  });
+  
+   $("#cond").click(function() {
+  
+   $('html, body').animate({scrollTop: $(".conditions").offset().top}, 2000);
+   
+  });
+  
+   $("#contact").click(function() {
+  
+   $('html, body').animate({scrollTop: $(".contacts").offset().top}, 2000);
+   
+  });
   
   //Кнопка подробнее
   
@@ -165,3 +196,25 @@ $(document).ready(function() {
   
   }); 
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
