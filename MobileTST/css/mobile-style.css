@@ -120,6 +120,21 @@ h3 {
   line-height: 1.3;
   padding: 25px;
 }
+.page__arrow {
+  position: fixed;
+  z-index: 950;
+  bottom: -75px;
+  right: 0;
+  width: 55px;
+  height: 55px;
+  background-color: #0ba0ff;
+  background-image: url('../imgs/arrow.png');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 50%;
+  padding: 15px;
+  cursor: pointer;
+}
 /* Номер телефона */
 .tel {
   font-family: GlBold, sans-serif;
@@ -214,7 +229,7 @@ h3 {
 .label {
   display: inline-block;
   vertical-align: middle;
-  font-size:16px;
+  font-size: 16px;
 }
 .checkbox:checked + .checkbox-custom::before {
   content: "";
@@ -229,7 +244,7 @@ h3 {
 }
 /* Информация о техникуме */
 .info__desc {
-  padding: 15px 55px;
+  padding: 15px;
 }
 .info__start-video {
   text-align: center;
@@ -241,14 +256,14 @@ h3 {
   color: #fff;
 }
 .link {
-	color:#009cff;
-	text-decoration:underline;
-	background:none;
-	border:none;
-	font-size:16px;
+  color: #009cff;
+  text-decoration: underline;
+  background: none;
+  border: none;
+  font-size: 16px;
 }
-.link:hover{
- cursor:pointer;
+.link:hover {
+  cursor: pointer;
 }
 /* Специальности */
 .spec__lever {
@@ -295,17 +310,21 @@ h3 {
 }
 .spec__buttons {
   text-align: center;
+  font-size: 0;
 }
 .spec__btn {
   background-color: #ff4343;
   border-radius: 27px;
   color: #fff;
-  margin-bottom: 25px;
-  margin-left: 15px;
-  margin-right: 15px;
+  font-size: 13px;
+  padding-left: 0;
+  padding-right: 0;
+  text-align: center;
+  width: 50%;
+  margin-bottom: 15px;
 }
-.spec__btn:nth-child(3n) {
-  margin-bottom: 0;
+.spec__btn--cond {
+  width: 100%;
 }
 .spec__btn:hover {
   background-color: #d62828;
@@ -358,19 +377,37 @@ h3 {
 }
 .conditions__text,
 .conditions__form {
-  padding: 25px 55px;
+  padding: 15px;
 }
 .conditions__button {
   border-radius: 27px;
   color: #fff;
   background-color: #0095ff;
 }
-
+.conditions__form-header {
+  text-align: center;
+  font-size: 24px;
+}
+/* Контакты */
+.contacts {
+  background-color: #f5f5f5;
+}
+.contacts__desc {
+  justify-content: space-between;
+  align-items: center;
+  padding: 35px 15px 75px;
+}
+.contacts__desc .text {
+  font-size: 17px;
+}
+.contacts__col {
+  flex-basis: 48%;
+}
 /* Подвал */
 .footer {
   background-color: #343434;
   text-align: center;
-  padding: 15px 0;
+  padding: 15px 55px;
 }
 .footer__text {
   color: #fff;

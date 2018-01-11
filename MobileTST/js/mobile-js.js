@@ -153,77 +153,90 @@ $(document).ready(function() {
       .eq(1)
       .addClass("spec__tab--selected");
   });
-  
+
   //скролл к блокам
-  
-  $("#glav").click(function() {
-  
-   $('html, body').animate({scrollTop: $(".header__head").offset().top}, 2000);
-   
+
+  $("#main").click(function() {
+    $("html, body").animate(
+      { scrollTop: $(".header__head").offset().top - 75 },
+      2000
+    );
   });
-  
-   $("#info").click(function() {
-  
-   $('html, body').animate({scrollTop: $(".info").offset().top}, 2000);
-   
+
+  $("#info").click(function() {
+    $("html, body").animate({ scrollTop: $(".info").offset().top - 50 }, 1500);
   });
-  
-   $("#spec").click(function() {
-  
-   $('html, body').animate({scrollTop: $(".spec").offset().top}, 2000);
-   
+
+  $("#spec").click(function() {
+    $("html, body").animate({ scrollTop: $(".spec").offset().top - 50 }, 1500);
   });
-  
-   $("#cond").click(function() {
-  
-   $('html, body').animate({scrollTop: $(".conditions").offset().top}, 2000);
-   
+
+  $(".js-scroll-to-conditions").click(function() {
+    $("html, body").animate(
+      { scrollTop: $(".conditions").offset().top - 50 },
+      1500
+    );
   });
-  
-   $("#contact").click(function() {
-  
-   $('html, body').animate({scrollTop: $(".contacts").offset().top}, 2000);
-   
+
+  $("#contact").click(function() {
+    $("html, body").animate(
+      { scrollTop: $(".contacts").offset().top - 50 },
+      1500
+    );
   });
-  
+
   //Кнопка подробнее
-  
+
   $("#next").hide();
-  
+
   $("#btn-next").click(function() {
-	
-	if (!$("#next").hasClass("active"))
-	{
-		$("#next").slideDown("slow").addClass("active");
-		$("#btn-next").text("Скрыть");
-	}
-	else
-	{
-		$("#next").slideUp("slow").removeClass("active");
-		$("#btn-next").text("Подробнее");
-	}
-  
-  }); 
+    if (!$("#next").hasClass("active")) {
+      $("#next")
+        .slideDown(500)
+        .addClass("active");
+      $("#btn-next").text("Скрыть");
+    } else {
+      $("#next")
+        .slideUp(500)
+        .removeClass("active");
+      $("#btn-next").text("Подробнее");
+    }
+  });
+
+  // Кнопка наверх
+  $(window).scroll(function() {
+    if ($(".js-scroll-top").offset().top > $(window).height()) {
+      $(".js-scroll-top").stop().animate(
+        {
+          bottom: "0"
+        },
+        500
+      );
+    } else {
+      $(".js-scroll-top").stop().animate(
+        {
+          bottom: "-75px"
+        },
+        200
+      );
+    }
+  });
+  $(".js-scroll-top")
+    .eq(0)
+    .click(function() {
+      $("html, body").animate(
+        { scrollTop: $(".page").offset().top - 75 },
+        1500,
+        function() {
+          if ($(".js-scroll-top").offset().top == $(window).height()) {
+            $(".js-scroll-top").stop().animate(
+              {
+                bottom: "-75px"
+              },
+              500
+            );
+          }
+        }
+      );
+    });
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

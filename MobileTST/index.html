@@ -11,6 +11,7 @@
 
 <body>
     <div class="page">
+        <div class="page__arrow js-scroll-top"></div>
         <div class="header">
             <div class="header__panel row">
                 <div class="header__menu menu js-toggle-menu">
@@ -21,7 +22,7 @@
                     </div>
                     <ul class="menu__list">
                         <li class="menu__item js-link">
-                            <a href="#" id="glav" class="menu__link">Главная</a>
+                            <a href="#" id="main" class="menu__link">Главная</a>
                         </li>
                         <li class="menu__item js-link">
                             <a href="#" id="info" class="menu__link">Информация о техникуме</a>
@@ -30,7 +31,7 @@
                             <a href="#" id="spec" class="menu__link">Специальности</a>
                         </li>
                         <li class="menu__item js-link">
-                            <a href="#" id="cond" class="menu__link">Условия поступления</a>
+                            <a href="#" id="cond" class="menu__link js-scroll-to-conditions">Условия поступления</a>
                         </li>
                         <li class="menu__item js-link">
                             <a href="#" id="contact" class="menu__link">Контакты</a>
@@ -52,22 +53,23 @@
             <div class="content__part info">
                 <div class="info__header blue-header">Информация о техникуме</div>
                 <div class="info__desc text">Зачастую при работе распределенной системы (попросту несколько серверов обрабатывающих пользовательские запросы
-                    или распределенная система 
-					
-					<span id="next">хранения данных или что-нибудь еще в этом роде) возникает необходимость принимать
-                    общие решения, например на каком из серверов запустить синглетон сервис уровня кластера, и куда его мигрировать
-                    при падении этого сервера.
-					</span><br>
-					
-					<button class="link" id="btn-next">Подробнее</button>
-					
-					</div>
+                    или распределенная система
+
+                    <span id="next">хранения данных или что-нибудь еще в этом роде) возникает необходимость принимать общие решения, например
+                        на каком из серверов запустить синглетон сервис уровня кластера, и куда его мигрировать при падении
+                        этого сервера.
+                    </span>
+                    <br>
+
+                    <button class="link" id="btn-next">Подробнее</button>
+
+                </div>
                 <div class="info__start-video">
                     <button class="btn info__btn">Смотреть видео</button>
                 </div>
             </div>
             <div class="content__part spec">
-			 <div class="info__header blue-header">Направления подготовки</div>
+                <div class="spec__header blue-header">Направления подготовки</div>
                 <div class="spec__part">
                     <div class="spec__lever js-open-spec">
                         <div class="spec__lever-text">Сварщик</div>
@@ -84,12 +86,12 @@
                                 Сообщения DNS обычно отправляются по протоколу UDP.</div>
                         </div>
                         <div class="spec__buttons">
-                            <button class="btn spec__btn js-scroll-to-conditions">Условия поступления</button>
+                            <button class="btn spec__btn spec__btn--cond js-scroll-to-conditions">Условия поступления</button>
                             <button class="btn spec__btn js-open-second-tab">Кем работать</button>
                             <button class="btn spec__btn js-open-third-tab">Чему научат</button>
                         </div>
                         <div class="spec__tabs">
-                            <div class="spec__tab spec__tab--selected">
+                            <div class="spec__tab">
                                 <p class="text">Экспертная система (далее по тексту — ЭС) — это информационная система, назначение которой
                                     частично или полностью заменить эксперта в той или иной предметной области. Подобные
                                     интеллектуальные системы эффективно применяются в таких областях, как логистика, управление
@@ -120,12 +122,12 @@
                                 Сообщения DNS обычно отправляются по протоколу UDP.</div>
                         </div>
                         <div class="spec__buttons">
-                            <button class="btn spec__btn js-scroll-to-conditions">Условия поступления</button>
+                            <button class="btn spec__btn spec__btn--cond js-scroll-to-conditions">Условия поступления</button>
                             <button class="btn spec__btn js-open-second-tab">Кем работать</button>
                             <button class="btn spec__btn js-open-third-tab">Чему научат</button>
                         </div>
                         <div class="spec__tabs">
-                            <div class="spec__tab spec__tab--selected">
+                            <div class="spec__tab">
                                 <p class="text">Экспертная система (далее по тексту — ЭС) — это информационная система, назначение которой
                                     частично или полностью заменить эксперта в той или иной предметной области. Подобные
                                     интеллектуальные системы эффективно применяются в таких областях, как логистика, управление
@@ -156,12 +158,12 @@
                                 Сообщения DNS обычно отправляются по протоколу UDP.</div>
                         </div>
                         <div class="spec__buttons">
-                            <button class="btn spec__btn js-scroll-to-conditions">Условия поступления</button>
+                            <button class="btn spec__btn spec__btn--cond js-scroll-to-conditions">Условия поступления</button>
                             <button class="btn spec__btn js-open-second-tab">Кем работать</button>
                             <button class="btn spec__btn js-open-third-tab">Чему научат</button>
                         </div>
                         <div class="spec__tabs">
-                            <div class="spec__tab spec__tab--selected">
+                            <div class="spec__tab">
                                 <p class="text">Экспертная система (далее по тексту — ЭС) — это информационная система, назначение которой
                                     частично или полностью заменить эксперта в той или иной предметной области. Подобные
                                     интеллектуальные системы эффективно применяются в таких областях, как логистика, управление
@@ -192,12 +194,12 @@
                                 Сообщения DNS обычно отправляются по протоколу UDP.</div>
                         </div>
                         <div class="spec__buttons">
-                            <button class="btn spec__btn js-scroll-to-conditions">Условия поступления</button>
+                            <button class="btn spec__btn spec__btn--cond js-scroll-to-conditions">Условия поступления</button>
                             <button class="btn spec__btn js-open-second-tab">Кем работать</button>
                             <button class="btn spec__btn js-open-third-tab">Чему научат</button>
                         </div>
                         <div class="spec__tabs">
-                            <div class="spec__tab spec__tab--selected">
+                            <div class="spec__tab">
                                 <p class="text">Экспертная система (далее по тексту — ЭС) — это информационная система, назначение которой
                                     частично или полностью заменить эксперта в той или иной предметной области. Подобные
                                     интеллектуальные системы эффективно применяются в таких областях, как логистика, управление
@@ -228,12 +230,12 @@
                                 Сообщения DNS обычно отправляются по протоколу UDP.</div>
                         </div>
                         <div class="spec__buttons">
-                            <button class="btn spec__btn js-scroll-to-conditions">Условия поступления</button>
+                            <button class="btn spec__btn spec__btn--cond js-scroll-to-conditions">Условия поступления</button>
                             <button class="btn spec__btn js-open-second-tab">Кем работать</button>
                             <button class="btn spec__btn js-open-third-tab">Чему научат</button>
                         </div>
                         <div class="spec__tabs">
-                            <div class="spec__tab spec__tab--selected">
+                            <div class="spec__tab">
                                 <p class="text">Экспертная система (далее по тексту — ЭС) — это информационная система, назначение которой
                                     частично или полностью заменить эксперта в той или иной предметной области. Подобные
                                     интеллектуальные системы эффективно применяются в таких областях, как логистика, управление
@@ -264,12 +266,12 @@
                                 Сообщения DNS обычно отправляются по протоколу UDP.</div>
                         </div>
                         <div class="spec__buttons">
-                            <button class="btn spec__btn js-scroll-to-conditions">Условия поступления</button>
+                            <button class="btn spec__btn spec__btn--cond js-scroll-to-conditions">Условия поступления</button>
                             <button class="btn spec__btn js-open-second-tab">Кем работать</button>
                             <button class="btn spec__btn js-open-third-tab">Чему научат</button>
                         </div>
                         <div class="spec__tabs">
-                            <div class="spec__tab spec__tab--selected">
+                            <div class="spec__tab">
                                 <p class="text">Экспертная система (далее по тексту — ЭС) — это информационная система, назначение которой
                                     частично или полностью заменить эксперта в той или иной предметной области. Подобные
                                     интеллектуальные системы эффективно применяются в таких областях, как логистика, управление
@@ -300,12 +302,12 @@
                                 Сообщения DNS обычно отправляются по протоколу UDP.</div>
                         </div>
                         <div class="spec__buttons">
-                            <button class="btn spec__btn js-scroll-to-conditions">Условия поступления</button>
+                            <button class="btn spec__btn spec__btn--cond js-scroll-to-conditions">Условия поступления</button>
                             <button class="btn spec__btn js-open-second-tab">Кем работать</button>
                             <button class="btn spec__btn js-open-third-tab">Чему научат</button>
                         </div>
                         <div class="spec__tabs">
-                            <div class="spec__tab spec__tab--selected">
+                            <div class="spec__tab">
                                 <p class="text">Экспертная система (далее по тексту — ЭС) — это информационная система, назначение которой
                                     частично или полностью заменить эксперта в той или иной предметной области. Подобные
                                     интеллектуальные системы эффективно применяются в таких областях, как логистика, управление
@@ -336,12 +338,12 @@
                                 Сообщения DNS обычно отправляются по протоколу UDP.</div>
                         </div>
                         <div class="spec__buttons">
-                            <button class="btn spec__btn js-scroll-to-conditions">Условия поступления</button>
+                            <button class="btn spec__btn spec__btn--cond js-scroll-to-conditions">Условия поступления</button>
                             <button class="btn spec__btn js-open-second-tab">Кем работать</button>
                             <button class="btn spec__btn js-open-third-tab">Чему научат</button>
                         </div>
                         <div class="spec__tabs">
-                            <div class="spec__tab spec__tab--selected">
+                            <div class="spec__tab">
                                 <p class="text">Экспертная система (далее по тексту — ЭС) — это информационная система, назначение которой
                                     частично или полностью заменить эксперта в той или иной предметной области. Подобные
                                     интеллектуальные системы эффективно применяются в таких областях, как логистика, управление
@@ -372,12 +374,12 @@
                                 Сообщения DNS обычно отправляются по протоколу UDP.</div>
                         </div>
                         <div class="spec__buttons">
-                            <button class="btn spec__btn js-scroll-to-conditions">Условия поступления</button>
+                            <button class="btn spec__btn spec__btn--cond js-scroll-to-conditions">Условия поступления</button>
                             <button class="btn spec__btn js-open-second-tab">Кем работать</button>
                             <button class="btn spec__btn js-open-third-tab">Чему научат</button>
                         </div>
                         <div class="spec__tabs">
-                            <div class="spec__tab spec__tab--selected">
+                            <div class="spec__tab">
                                 <p class="text">Экспертная система (далее по тексту — ЭС) — это информационная система, назначение которой
                                     частично или полностью заменить эксперта в той или иной предметной области. Подобные
                                     интеллектуальные системы эффективно применяются в таких областях, как логистика, управление
@@ -402,6 +404,7 @@
                     что реляционные базы данных лучше подходят для приложений, которые имеют структурированные данные, такие
                     как списки пользователей, сообщения в блогах и т.д.</div>
                 <form action="" class="conditions__form" name="c_form" method="post">
+                    <div class="conditions__form-header h1">Отправить заявку на поступление</div>
                     <label for="c_name" class="conditions__label-hiden">
                         <input type="text" name="c_name" id="c_name" class="conditions__input" placeholder="Ваше имя">
                     </label>
@@ -436,7 +439,8 @@
                         <input type="checkbox" name="c_pers_info" id="c_pers_info" class="conditions__checkbox checkbox">
                         <span class="checkbox-custom"></span>
                         <span class="label">Даю согласие на обработку в АПОУ УР "Техникум строительных технологий" указанных мной персональных
-                            данных</span>
+                            данных
+                        </span>
                     </label>
                     <button class="btn conditions__button" type="submit">Отправить</button>
                 </form>
@@ -445,13 +449,16 @@
                 <div class="contacts__header blue-header">Контакты</div>
                 <div class="contacts__desc row">
                     <div class="contacts__col">
-                        <p class="text"></p>
-                        <p class="text"></p>
-                        <p class="text"></p>
-                        <p class="text"></p>
+                        <p class="text"><span class="h1">Адрес:</span> 426, г. Ижевск улица Дзержинского, 95</p>
+                        <p class="text"><span class="h1">Факс:</span></p>
+                        <p class="text"><span class="h1">Телефон:</span></p>
+                        <p class="text"><span class="h1">Почта: </span></p>
                     </div>
                     <div class="contacts__col">
-                        <p class="text"></p>
+                        <p class="text"><span class="h1">Проезд:</span></p>
+                        <p class="text">
+                            <a href="#" class="link"><b>Схема проезда</b></a>
+                        </p>
                     </div>
                 </div>
             </div>
