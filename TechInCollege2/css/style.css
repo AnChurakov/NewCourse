@@ -1437,13 +1437,22 @@ video {
 }
 @media (max-width: 1280px) and (max-height: 768px) {
   .links-area {
-    top: calc(var(--link-area-top-translate)*-1.1);
+    top: calc(var(--link-area-top-translate)*1.2);
   }
   .info-rect {
-    top: calc(var(--info-rect-top-translate)*1.3);
+    top: calc(var(--info-rect-top-translate)*1);
+  }
+  .contacts__text{
+    font-size:25px;
+  }
+  .text-area__text .text{
+    font-size:16px;
+  }
+  .text-area__text .h2 {
+    font-size:25px;
   }
   .down-arrow {
-    bottom: -70%;
+    bottom: -30%;
   }
   .square-right {
     top: 30%;
