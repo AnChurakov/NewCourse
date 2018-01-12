@@ -255,6 +255,18 @@ h3 {
   border-radius: 25px;
   color: #fff;
 }
+.danger__btn {
+	border-radius:25px;
+	color:#fff;
+	background-color:#d62828;
+}
+.link__danger{
+	color:#d62828;
+	text-decoration:underline;
+	background:none;
+	border:none;
+	font-size:16px;
+}
 .link {
   color: #009cff;
   text-decoration: underline;
