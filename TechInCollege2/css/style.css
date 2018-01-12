@@ -1336,6 +1336,12 @@ video {
 .welder-what-teach-img {
   background-image: url("../images/svar.jpg");
 }
+.machinist-what-teach-img{
+	background-image: url("../images/remont.jpg");
+}
+.builder-what-teach-img{
+	background-image: url("../images/zdanie.jpg");
+}
 .locksmith-what-teach-img {
   background-image: url("../images/stolyar.jpg");
 }
