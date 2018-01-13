@@ -175,50 +175,47 @@ $(document).ready(function() {
                 }, 1000);
             });
         }, 2000); */
+   
 
-    //Отправка письма
-    /* var btn = $("#btnSub").hide();
+   var btn = $("#btnSub").hide();
+      //Отправка письма
+        
+
+        $("#personalInfo").on("click", function() {
+
         var name = $("#userName").val();
         var select = $("#specSelect").val();
         var selectStatus = $("#statusSelect").val();
         var tel = $("#contacts").val();
         var check = $("#personalInfo").val();
 
-        $("#personalInfo").blur(function() {
+        if ($(this).is(":checked") && name != "" && tel != "")
+        {
+          btn.show();
+          btn.click(function() {
 
-            if ($(this).is(":checked") && name != null && select != null && selectStatus != null && tel != null) {
-                alert(1);
-                btn.show();
-            
-                btn.click(function() {
-                    $.ajax({
-                        url: "mail.php",
-                        dataType: "text",
-                        type: "POST",
-                        data: "name="+name+"&select="+select+"&selectStatus="+selectStatus+"&tel="+tel,
-                        success: function(data) {
-                            if (data != null) {
-                                alert(data);
-                            }                
-                        }
-                    });
-                });     
-            } else {
-                alert("Вы заполнили не все поля!");
+              $.ajax({
+            url:"mail.php",
+            type:"POST",
+            dataType:"text",
+            data:"name="+name+"&select="+select+"&status="+selectStatus+"&tel="+tel,
+            success:function(data)
+            {
+              alert(data);
             }
-        }); */
-    $("#btnSub").hide();
-    $("#personalInfo").click(function() {
-      if ($("#personalInfo").is(":checked")) {
-        $("#btnSub").show();
-      } else {
-        $("#btnSub").hide();
-      }
-    });
 
-    $("#btnSub").click(function() {
-      // TODO: Ajax
-    });
+          });
+
+          });
+        
+        }
+        else{
+          alert("Вы заполнили не все поля!");
+        }
+
+
+        });
+
 
     $(".down-arrow__shape")
       .eq(0)
