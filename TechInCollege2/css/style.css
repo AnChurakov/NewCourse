@@ -1110,6 +1110,9 @@ video {
   width: 110px;
   height: 110px;
   background-color: #fff;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
   border-radius: 50%;
   visibility: hidden;
   opacity: 0;
@@ -1128,37 +1131,64 @@ video {
   top: 290px;
   right: 100px;
 }
+.links-area__plus-button--1 .links-area__plus-button-tooltip {
+  background-image: url("../images/sux-work.jpg");
+}
 .links-area__plus-button--2 {
   top: 170px;
   right: 250px;
+}
+.links-area__plus-button--2 .links-area__plus-button-tooltip {
+  background-image: url("../images/svargr.jpg");
 }
 .links-area__plus-button--3 {
   top: 270px;
   left: 100px;
 }
+.links-area__plus-button--3 .links-area__plus-button-tooltip {
+  background-image: url("../images/build-machine.jpg");
+}
 .links-area__plus-button--4 {
   top: 130px;
   left: 250px;
+}
+.links-area__plus-button--4 .links-area__plus-button-tooltip {
+  background-image: url("../images/plot-work.jpg");
 }
 .links-area__plus-button--5 {
   top: 300px;
   left: 300px;
 }
+.links-area__plus-button--5 .links-area__plus-button-tooltip {
+  background-image: url("../images/build-zd.jpg");
+}
 .links-area__plus-button--6 {
   top: 100px;
   right: 100px;
+}
+.links-area__plus-button--6 .links-area__plus-button-tooltip {
+  background-image: url("../images/electrik.jpg");
 }
 .links-area__plus-button--7 {
   top: 300px;
   right: 300px;
 }
+.links-area__plus-button--7 .links-area__plus-button-tooltip {
+  background-image: url("../images/otdel-work.jpg");
+}
 .links-area__plus-button--8 {
   top: 145px;
   left: 100px;
 }
+.links-area__plus-button--8 .links-area__plus-button-tooltip {
+  background-image: url("../images/test.jpg");
+}
 .links-area__plus-button--9 {
   top: 220px;
   right: -10px;
+}
+.links-area__plus-button--9 .links-area__plus-button-tooltip {
+  background-image: url("../images/ob.jpg");
 }
 /* ------ */
 /* Модальное окно с видео */
@@ -1442,14 +1472,14 @@ video {
   .info-rect {
     top: calc(var(--info-rect-top-translate)*1);
   }
-  .contacts__text{
-    font-size:25px;
+  .contacts__text {
+    font-size: 25px;
   }
-  .text-area__text .text{
-    font-size:16px;
+  .text-area__text .text {
+    font-size: 16px;
   }
   .text-area__text .h2 {
-    font-size:25px;
+    font-size: 25px;
   }
   .down-arrow {
     bottom: -30%;
@@ -1470,16 +1500,16 @@ video {
   }
 }
 @media (min-width: 1366px) and (max-width: 1600px) {
-  .text-area__text .text{
-    font-size:16px;
+  .text-area__text .text {
+    font-size: 16px;
   }
-
   .links-area {
     top: calc(var(--link-area-top-translate)*2.2);
   }
   .info-rect {
     top: calc(var(--info-rect-top-translate)*0.5);
   }
+
   .show-video {
     top: calc(var(--show-video-top-translate)*0.5);
   }
