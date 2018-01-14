@@ -154,22 +154,42 @@ $(document).ready(function() {
       .addClass("spec__tab--selected");
   });
 
-  $(".conditions__button").eq(0).hide();
+  $(".conditions__button")
+    .eq(0)
+    .hide();
   $("#c_pers_info").click(function() {
     if ($("#c_pers_info").is(":checked")) {
-      $(".conditions__button").eq(0).show();
+      $(".conditions__button")
+        .eq(0)
+        .show();
     } else {
-      $(".conditions__button").eq(0).hide();
+      $(".conditions__button")
+        .eq(0)
+        .hide();
     }
   });
 
   //скролл к блокам
 
   $("#main").click(function() {
-    $("html, body").animate(
-      { scrollTop: $(".header__head").offset().top - 75 },
-      2000
-    );
+    $("html, body")
+      .stop()
+      .animate(
+        { scrollTop: $(".header__head").offset().top - 75 },
+        2000,
+        function() {
+          if ($(".js-scroll-top").offset().top == $(window).height()) {
+            $(".js-scroll-top")
+              .stop()
+              .animate(
+                {
+                  bottom: "-75px"
+                },
+                500
+              );
+          }
+        }
+      );
   });
 
   $("#info").click(function() {
@@ -254,4 +274,12 @@ $(document).ready(function() {
         }
       );
     });
+  $("html").on("click", function(e) {
+    if (
+      !$(e.target).closest(".js-toggle-menu").length &&
+      menu.button.hasClass("menu--opened")
+    ) {
+      menu.close();
+    }
+  });
 });
