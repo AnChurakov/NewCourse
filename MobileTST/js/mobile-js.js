@@ -283,3 +283,42 @@ $(document).ready(function() {
     }
   });
 });
+
+var btn = $("#btnSub").hide();
+      //Отправка письма
+        
+
+        $("#personalInfo").on("click", function() {
+
+        var name = $("#userName").val();
+        var select = $("#specSelect").val();
+        var selectStatus = $("#statusSelect").val();
+        var tel = $("#contacts").val();
+        var check = $("#personalInfo").val();
+
+        if ($(this).is(":checked") && name != "" && tel != "")
+        {
+          btn.show();
+          btn.click(function() {
+
+              $.ajax({
+            url:"mail.php",
+            type:"POST",
+            dataType:"text",
+            data:"name="+name+"&select="+select+"&status="+selectStatus+"&tel="+tel,
+            success:function(data)
+            {
+              alert(data);
+            }
+
+          });
+
+          });
+        
+        }
+        else{
+          alert("Вы заполнили не все поля!");
+        }
+
+
+        });

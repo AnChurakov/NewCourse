@@ -406,10 +406,10 @@
                 <form action="" class="conditions__form" name="c_form" method="post">
                     <div class="conditions__form-header h1">Отправить заявку на поступление</div>
                     <label for="c_name" class="conditions__label-hiden">
-                        <input type="text" name="c_name" id="c_name" class="conditions__input" placeholder="Ваше имя">
+                        <input type="text" name="c_name" id="userName" class="conditions__input" placeholder="Ваше имя">
                     </label>
                     <label for="c_spec" class="conditions__label-hiden">
-                        <select name="c_spec" id="c_spec" class="conditions__select">
+                        <select name="c_spec" id="specSelect" class="conditions__select">
                             <option value="#" disabled selected>Специальность</option>
                             <option value="#">Строительство зданий и сооружений</option>
                             <option value="#">Электромонтер по ремонту и обслуживанию электрооборудования</option>
@@ -425,10 +425,10 @@
                         </select>
                     </label>
                     <label for="c_connect" class="conditions__label-hiden">
-                        <input type="text" id="c_connect" name="c_connect" class="conditions__input" placeholder="Контакты">
+                        <input type="text" id="contacts" name="c_connect" class="conditions__input" placeholder="Контакты">
                     </label>
                     <label for="c_status" class="conditions__label-hiden">
-                        <select name="c_status" id="c_status" class="conditions__select">
+                        <select name="c_status" id="statusSelect" class="conditions__select">
                             <option value="#" disabled selected>Статус</option>
                             <option value="#">Поступающий</option>
                             <option value="#">Родитель(законный представитель) поступающего</option>
@@ -436,13 +436,13 @@
                         </select>
                     </label>
                     <label for="c_pers_info" class="conditions__label-checkbox">
-                        <input type="checkbox" name="c_pers_info" id="c_pers_info" class="conditions__checkbox checkbox">
+                        <input type="checkbox" name="c_pers_info" id="personalInfo" class="conditions__checkbox checkbox">
                         <span class="checkbox-custom"></span>
                         <span class="label">Даю согласие на обработку в АПОУ УР "Техникум строительных технологий" указанных мной персональных
                             данных
                         </span>
                     </label>
-                    <button class="btn conditions__button" type="submit">Отправить</button>
+                    <button class="btn conditions__button" id="btnSub" type="button">Отправить</button>
                 </form>
             </div>
             <div class="content__part contacts">
