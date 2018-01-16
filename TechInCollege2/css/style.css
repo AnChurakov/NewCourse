@@ -1498,6 +1498,10 @@ video {
   .otdel {
     background-position-x: 270px;
   }
+  .about-btn {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 @media (min-width: 1366px) and (max-width: 1600px) {
   .text-area__text .text {
