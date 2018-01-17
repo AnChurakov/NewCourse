@@ -1564,6 +1564,9 @@ video {
     flex-flow: column;
     align-items: left;
   }
+  .buttons-area {
+    justify-content: center;
+  }
   .info-tech .rect-text:before {
     width: 90%;
     left: -20%;
